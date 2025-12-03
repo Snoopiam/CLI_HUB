@@ -58,12 +58,12 @@ export const colors = {
   error: '#F87171',
 } as const;
 
-// Typography - Arboria from Adobe Fonts
+// Typography - Arboria from Adobe Fonts (single font everywhere)
 export const typography = {
   // Font families
   family: {
     sans: '"arboria", sans-serif',
-    mono: '"JetBrains Mono", "Fira Code", monospace',
+    mono: '"arboria", sans-serif',
   },
 
   // Size scale (rem)
