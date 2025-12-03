@@ -1,0 +1,77 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient for the hammer head -->
+    <linearGradient id="hammerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    <!-- Glow effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Lightning gradient -->
+    <linearGradient id="lightningGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle (optional, for app icon) -->
+  <circle cx="256" cy="256" r="240" fill="#0f0f23" opacity="0"/>
+
+  <!-- Hammer Head -->
+  <g filter="url(#glow)">
+    <!-- Main hammer block -->
+    <rect x="136" y="80" width="240" height="140" rx="12" fill="url(#hammerGradient)"/>
+
+    <!-- Left end cap -->
+    <path d="M136 100 L120 90 L120 210 L136 200 L136 100Z" fill="url(#hammerGradient)" opacity="0.85"/>
+
+    <!-- Right end cap -->
+    <path d="M376 100 L392 90 L392 210 L376 200 L376 100Z" fill="url(#hammerGradient)" opacity="0.85"/>
+
+    <!-- Top detail lines -->
+    <rect x="156" y="95" width="200" height="4" rx="2" fill="white" opacity="0.3"/>
+    <rect x="156" y="105" width="200" height="2" rx="1" fill="white" opacity="0.15"/>
+
+    <!-- Bottom detail lines -->
+    <rect x="156" y="200" width="200" height="4" rx="2" fill="white" opacity="0.2"/>
+  </g>
+
+  <!-- Handle -->
+  <g>
+    <!-- Main handle -->
+    <rect x="232" y="220" width="48" height="180" rx="6" fill="url(#hammerGradient)" opacity="0.9"/>
+
+    <!-- Handle grip wrapping -->
+    <rect x="232" y="240" width="48" height="8" rx="2" fill="white" opacity="0.15"/>
+    <rect x="232" y="260" width="48" height="8" rx="2" fill="white" opacity="0.15"/>
+    <rect x="232" y="280" width="48" height="8" rx="2" fill="white" opacity="0.15"/>
+    <rect x="232" y="300" width="48" height="8" rx="2" fill="white" opacity="0.15"/>
+    <rect x="232" y="320" width="48" height="8" rx="2" fill="white" opacity="0.15"/>
+
+    <!-- Handle bottom cap -->
+    <rect x="224" y="390" width="64" height="20" rx="4" fill="url(#hammerGradient)"/>
+  </g>
+
+  <!-- Leather strap/loop -->
+  <path d="M256 410 Q256 450 240 460 Q220 470 220 450 Q220 430 240 435 Q256 440 256 410"
+        stroke="url(#hammerGradient)" stroke-width="6" fill="none" opacity="0.7"/>
+  <path d="M256 410 Q256 450 272 460 Q292 470 292 450 Q292 430 272 435 Q256 440 256 410"
+        stroke="url(#hammerGradient)" stroke-width="6" fill="none" opacity="0.7"/>
+
+  <!-- Lightning bolt accent -->
+  <g filter="url(#glow)">
+    <path d="M400 60 L370 130 L395 130 L355 200 L420 110 L390 110 L420 60 Z"
+          fill="url(#lightningGradient)"/>
+  </g>
+
+  <!-- Small lightning sparks -->
+  <circle cx="100" cy="150" r="4" fill="#fbbf24" opacity="0.6"/>
+  <circle cx="412" cy="180" r="3" fill="#fbbf24" opacity="0.5"/>
+  <circle cx="90" cy="200" r="2" fill="#fbbf24" opacity="0.4"/>
+</svg>

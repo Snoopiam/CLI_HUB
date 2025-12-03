@@ -47,28 +47,23 @@ export default function Header() {
             whileHover={{ scale: 1.05, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
           >
-            {/* Mjolnir icon (hammer) */}
+            {/* Mjölnir icon (hammer with lightning) */}
             <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              viewBox="0 0 32 32"
               fill="none"
-              style={{ color: colors.text.inverse }}
             >
-              <path
-                d="M6 2h12v6H6V2z"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M12 8v14M9 22h6"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+              {/* Hammer head */}
+              <rect x="6" y="6" width="16" height="9" rx="1.5" fill="white"/>
+              {/* Left cap */}
+              <rect x="4" y="7" width="3" height="7" rx="1" fill="white" opacity="0.85"/>
+              {/* Right cap */}
+              <rect x="21" y="7" width="3" height="7" rx="1" fill="white" opacity="0.85"/>
+              {/* Handle */}
+              <rect x="11" y="15" width="6" height="11" rx="1" fill="white" opacity="0.9"/>
+              {/* Lightning bolt */}
+              <path d="M24 3 L22 7 L24 7 L21 11 L26 6 L23.5 6 L26 3 Z" fill="#fbbf24"/>
             </svg>
             {/* Shine effect */}
             <motion.div
