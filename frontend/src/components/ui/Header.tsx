@@ -38,41 +38,16 @@ export default function Header() {
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo - Mjölnir */}
         <Link to="/" className="flex items-center gap-3 group">
-          {/* Logo mark */}
+          {/* Logo mark - Mjölnir hammer */}
           <motion.div
-            className="relative w-9 h-9 rounded-xl flex items-center justify-center overflow-hidden"
-            style={{
-              background: `linear-gradient(135deg, ${colors.accent.primary}, ${colors.accent.secondary})`,
-            }}
-            whileHover={{ scale: 1.05, rotate: 5 }}
+            className="relative w-10 h-10 flex items-center justify-center"
+            whileHover={{ scale: 1.05, rotate: 3 }}
             whileTap={{ scale: 0.95 }}
           >
-            {/* Mjölnir icon (hammer with lightning) */}
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 32 32"
-              fill="none"
-            >
-              {/* Hammer head */}
-              <rect x="6" y="6" width="16" height="9" rx="1.5" fill="white"/>
-              {/* Left cap */}
-              <rect x="4" y="7" width="3" height="7" rx="1" fill="white" opacity="0.85"/>
-              {/* Right cap */}
-              <rect x="21" y="7" width="3" height="7" rx="1" fill="white" opacity="0.85"/>
-              {/* Handle */}
-              <rect x="11" y="15" width="6" height="11" rx="1" fill="white" opacity="0.9"/>
-              {/* Lightning bolt */}
-              <path d="M24 3 L22 7 L24 7 L21 11 L26 6 L23.5 6 L26 3 Z" fill="#fbbf24"/>
-            </svg>
-            {/* Shine effect */}
-            <motion.div
-              className="absolute inset-0"
-              style={{
-                background: 'linear-gradient(135deg, rgba(255,255,255,0.2), transparent 50%)',
-              }}
-              initial={{ opacity: 0 }}
-              whileHover={{ opacity: 1 }}
+            <img
+              src="/mjolnir-icon.png"
+              alt="Mjölnir"
+              className="w-10 h-10 object-contain"
             />
           </motion.div>
 
