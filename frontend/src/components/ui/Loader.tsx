@@ -1,8 +1,8 @@
 /**
- * Loader - Elegant loading indicator
+ * Loader - Mjölnir Triquetra loading indicator
  *
- * A sophisticated, minimal loader that feels intentional.
- * Three concentric rings that pulse with purpose.
+ * Features the triquetra symbol from the Mjölnir brand,
+ * with a pulsing glow animation.
  */
 
 import { motion } from 'framer-motion';
@@ -15,105 +15,62 @@ interface LoaderProps {
 }
 
 const sizes = {
-  sm: { outer: 32, middle: 24, inner: 16, stroke: 1.5 },
-  md: { outer: 56, middle: 42, inner: 28, stroke: 2 },
-  lg: { outer: 80, middle: 60, inner: 40, stroke: 2.5 },
+  sm: { icon: 32 },
+  md: { icon: 56 },
+  lg: { icon: 80 },
 };
 
 export default function Loader({ size = 'md', label, className = '' }: LoaderProps) {
   const s = sizes[size];
-  const center = s.outer / 2;
 
   return (
     <div className={`flex flex-col items-center justify-center gap-4 ${className}`}>
-      <div className="relative" style={{ width: s.outer, height: s.outer }}>
-        <svg
-          width={s.outer}
-          height={s.outer}
-          viewBox={`0 0 ${s.outer} ${s.outer}`}
-          fill="none"
-        >
-          {/* Outer ring - slowest */}
-          <motion.circle
-            cx={center}
-            cy={center}
-            r={(s.outer - s.stroke * 2) / 2}
-            stroke={colors.border.emphasis}
-            strokeWidth={s.stroke}
-            strokeLinecap="round"
-            strokeDasharray={`${Math.PI * (s.outer - s.stroke * 2) * 0.25} ${Math.PI * (s.outer - s.stroke * 2) * 0.75}`}
-            initial={{ rotate: 0, opacity: 0.3 }}
-            animate={{
-              rotate: 360,
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{
-              rotate: { duration: 3, ease: 'linear', repeat: Infinity },
-              opacity: { duration: 2, ease: 'easeInOut', repeat: Infinity },
-            }}
-            style={{ transformOrigin: 'center' }}
-          />
+      <motion.div
+        className="relative"
+        style={{ width: s.icon, height: s.icon }}
+        animate={{
+          scale: [1, 1.05, 1],
+        }}
+        transition={{
+          duration: 2,
+          ease: 'easeInOut',
+          repeat: Infinity,
+        }}
+      >
+        {/* Glow effect behind the icon */}
+        <motion.div
+          className="absolute inset-0 rounded-full"
+          style={{
+            background: `radial-gradient(circle, ${colors.accent.primary}40 0%, transparent 70%)`,
+            filter: 'blur(8px)',
+          }}
+          animate={{
+            opacity: [0.5, 1, 0.5],
+            scale: [0.9, 1.1, 0.9],
+          }}
+          transition={{
+            duration: 2,
+            ease: 'easeInOut',
+            repeat: Infinity,
+          }}
+        />
 
-          {/* Middle ring - medium speed */}
-          <motion.circle
-            cx={center}
-            cy={center}
-            r={(s.middle - s.stroke * 2) / 2}
-            stroke={colors.accent.secondary}
-            strokeWidth={s.stroke}
-            strokeLinecap="round"
-            strokeDasharray={`${Math.PI * (s.middle - s.stroke * 2) * 0.3} ${Math.PI * (s.middle - s.stroke * 2) * 0.7}`}
-            initial={{ rotate: 180 }}
-            animate={{
-              rotate: -180,
-            }}
-            transition={{
-              duration: 2,
-              ease: 'linear',
-              repeat: Infinity,
-            }}
-            style={{ transformOrigin: 'center' }}
-          />
-
-          {/* Inner ring - fastest, accent color */}
-          <motion.circle
-            cx={center}
-            cy={center}
-            r={(s.inner - s.stroke * 2) / 2}
-            stroke={colors.accent.primary}
-            strokeWidth={s.stroke}
-            strokeLinecap="round"
-            strokeDasharray={`${Math.PI * (s.inner - s.stroke * 2) * 0.4} ${Math.PI * (s.inner - s.stroke * 2) * 0.6}`}
-            initial={{ rotate: 0 }}
-            animate={{
-              rotate: 360,
-            }}
-            transition={{
-              duration: 1.2,
-              ease: 'linear',
-              repeat: Infinity,
-            }}
-            style={{ transformOrigin: 'center' }}
-          />
-
-          {/* Center dot - breathing */}
-          <motion.circle
-            cx={center}
-            cy={center}
-            r={2}
-            fill={colors.accent.primary}
-            animate={{
-              scale: [1, 1.5, 1],
-              opacity: [0.5, 1, 0.5],
-            }}
-            transition={{
-              duration: 1.5,
-              ease: 'easeInOut',
-              repeat: Infinity,
-            }}
-          />
-        </svg>
-      </div>
+        {/* Triquetra icon */}
+        <motion.img
+          src="/triquetra-icon.png"
+          alt="Loading..."
+          className="relative z-10"
+          style={{ width: s.icon, height: s.icon }}
+          animate={{
+            rotate: [0, 360],
+          }}
+          transition={{
+            duration: 8,
+            ease: 'linear',
+            repeat: Infinity,
+          }}
+        />
+      </motion.div>
 
       {label && (
         <motion.p
