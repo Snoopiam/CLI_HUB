@@ -1,13 +1,13 @@
-# 📁 PersonalAIHub - Complete Folder Structure
+# 📁 MjolnirAI - Complete Folder Structure
 
 ## Overview
 
-Everything is now organized in a single `PersonalAIHub` folder with clear separation between frontend and backend.
+Everything is now organized in a single `MjolnirAI` folder with clear separation between frontend and backend.
 
 ## Directory Tree
 
 ```
-C:\SnoopLabs\Labs\PersonalAIHub\
+C:\SnoopLabs\Labs\MjolnirAI\
 │
 ├── 📄 README.md                          # Main project overview
 ├── 📄 START_HERE.md                      # ⭐ Quick 5-minute setup guide
@@ -162,7 +162,7 @@ No environment variables needed - proxies to backend via Vite.
 
 ### Frontend
 ```powershell
-cd "C:\SnoopLabs\Labs\PersonalAIHub\frontend"
+cd "C:\SnoopLabs\Labs\MjolnirAI\frontend"
 npm install          # Install dependencies
 npm run dev         # Start dev server (port 5174)
 npm run build       # Build for production
@@ -171,7 +171,7 @@ npm run preview     # Preview production build
 
 ### Backend
 ```powershell
-cd "C:\SnoopLabs\Labs\PersonalAIHub\backend"
+cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
 npm install          # Install dependencies
 npm run dev         # Start dev server (port 3001)
 npm run build       # Compile TypeScript

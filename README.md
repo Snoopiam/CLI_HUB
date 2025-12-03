@@ -1,4 +1,4 @@
-# Personal AI Hub
+# MjolnirAI ⚡
 
 **Your Claude Code Optimization Guide** - Get personalized recommendations for skills, agents, MCPs, hooks, and commands based on your task.
 
@@ -6,7 +6,7 @@
 
 ## What Is This?
 
-Personal AI Hub analyzes your task description and recommends the best Claude Code features to help you work more efficiently. Instead of manually searching through documentation, simply describe what you want to do and get:
+MjolnirAI analyzes your task description and recommends the best Claude Code features to help you work more efficiently. Instead of manually searching through documentation, simply describe what you want to do and get:
 
 - **Agents** - Specialized AI assistants (debugger, code-reviewer, etc.)
 - **Skills** - Reusable workflows that Claude activates automatically
@@ -116,7 +116,7 @@ Go to **http://localhost:5174**
 ## Project Structure
 
 ```
-PersonalAIHub/
+MjolnirAI/
 ├── frontend/                    # React + TypeScript + Vite
 │   ├── src/
 │   │   ├── components/

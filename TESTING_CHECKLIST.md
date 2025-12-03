@@ -10,28 +10,28 @@
 
 ### File Verification
 ✅ **Frontend Files:**
-- `Labs/PersonalAIHub/frontend/package.json` ✓
-- `Labs/PersonalAIHub/frontend/vite.config.ts` ✓ (Proxy configured to port 3001)
-- `Labs/PersonalAIHub/frontend/src/App.tsx` ✓ (Routes configured)
-- `Labs/PersonalAIHub/frontend/src/pages/Dashboard.tsx` ✓
-- `Labs/PersonalAIHub/frontend/src/pages/LogoTask.tsx` ✓
-- `Labs/PersonalAIHub/frontend/src/pages/AgentsPage.tsx` ✓
-- `Labs/PersonalAIHub/frontend/src/components/*` ✓ (All 3 components)
-- `Labs/PersonalAIHub/frontend/src/services/api.ts` ✓
-- `Labs/PersonalAIHub/frontend/config/projects.json` ✓
-- `Labs/PersonalAIHub/frontend/config/tasks/logo.json` ✓
+- `Labs/MjolnirAI/frontend/package.json` ✓
+- `Labs/MjolnirAI/frontend/vite.config.ts` ✓ (Proxy configured to port 3001)
+- `Labs/MjolnirAI/frontend/src/App.tsx` ✓ (Routes configured)
+- `Labs/MjolnirAI/frontend/src/pages/Dashboard.tsx` ✓
+- `Labs/MjolnirAI/frontend/src/pages/LogoTask.tsx` ✓
+- `Labs/MjolnirAI/frontend/src/pages/AgentsPage.tsx` ✓
+- `Labs/MjolnirAI/frontend/src/components/*` ✓ (All 3 components)
+- `Labs/MjolnirAI/frontend/src/services/api.ts` ✓
+- `Labs/MjolnirAI/frontend/config/projects.json` ✓
+- `Labs/MjolnirAI/frontend/config/tasks/logo.json` ✓
 
 ✅ **Backend Files:**
-- `Labs/PersonalAIHub/backend/package.json` ✓
-- `Labs/PersonalAIHub/backend/src/server.ts` ✓ (CORS configured)
-- `Labs/PersonalAIHub/backend/src/routes/*` ✓ (All 3 routes)
-- `Labs/PersonalAIHub/backend/src/services/*` ✓ (All 3 services)
+- `Labs/MjolnirAI/backend/package.json` ✓
+- `Labs/MjolnirAI/backend/src/server.ts` ✓ (CORS configured)
+- `Labs/MjolnirAI/backend/src/routes/*` ✓ (All 3 routes)
+- `Labs/MjolnirAI/backend/src/services/*` ✓ (All 3 services)
 
 ✅ **Documentation:**
-- `Labs/PersonalAIHub/START_HERE.md` ✓
-- `Labs/PersonalAIHub/frontend/SETUP_GUIDE.md` ✓
-- `Labs/PersonalAIHub/PERSONAL_AI_HUB_COMPLETE.md` ✓
-- `Labs/PersonalAIHub/backend/README.md` ✓
+- `Labs/MjolnirAI/START_HERE.md` ✓
+- `Labs/MjolnirAI/frontend/SETUP_GUIDE.md` ✓
+- `Labs/MjolnirAI/PERSONAL_AI_HUB_COMPLETE.md` ✓
+- `Labs/MjolnirAI/backend/README.md` ✓
 
 ## What Still Needs Testing (By You)
 
@@ -39,14 +39,14 @@
 
 **Frontend:**
 ```powershell
-cd "C:\SnoopLabs\Labs\PersonalAIHub\frontend"
+cd "C:\SnoopLabs\Labs\MjolnirAI\frontend"
 npm install
 ```
 Expected: No errors, all dependencies installed
 
 **Backend:**
 ```powershell
-cd "C:\SnoopLabs\Labs\PersonalAIHub\backend"
+cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
 npm install
 ```
 Expected: No errors, all dependencies installed
@@ -55,7 +55,7 @@ Expected: No errors, all dependencies installed
 
 **Create `.env` file:**
 ```powershell
-cd "C:\SnoopLabs\Labs\PersonalAIHub\backend"
+cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
 Copy-Item .env.example .env
 ```
 
@@ -70,7 +70,7 @@ FRONTEND_URL=http://localhost:5174
 
 **Start server:**
 ```powershell
-cd "C:\SnoopLabs\Labs\PersonalAIHub\backend"
+cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
 npm run dev
 ```
 
@@ -88,7 +88,7 @@ npm run dev
 
 **Start dev server:**
 ```powershell
-cd "C:\SnoopLabs\Labs\PersonalAIHub\frontend"
+cd "C:\SnoopLabs\Labs\MjolnirAI\frontend"
 npm run dev
 ```
 

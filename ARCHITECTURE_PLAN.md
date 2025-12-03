@@ -1,8 +1,8 @@
-# Personal AI Hub - Architecture Transformation Plan
+# MjolnirAI - Architecture Transformation Plan
 
 ## Vision & Mission
 
-**Transform PersonalAIHub into a Claude Code Optimization Guide** that helps users get the most out of Claude Code by recommending the right skills, agents, tools, MCPs, hooks, and commands based on their tasks.
+**Transform MjolnirAI into a Claude Code Optimization Guide** that helps users get the most out of Claude Code by recommending the right skills, agents, tools, MCPs, hooks, and commands based on their tasks.
 
 ## Core Concept: The Gap
 
@@ -224,7 +224,7 @@ GET /api/checks/tools - Check installed tools
 ## File Structure (Proposed)
 
 ```
-PersonalAIHub/
+MjolnirAI/
 ├── frontend/
 │   ├── src/
 │   │   ├── components/

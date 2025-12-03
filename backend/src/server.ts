@@ -96,7 +96,7 @@ app.get('/health', (req, res) => {
 // =============================================================================
 
 app.listen(PORT, () => {
-  console.log(`🚀 Personal AI Hub Server running on http://localhost:${PORT}`);
+  console.log(`🚀 MjolnirAI Server running on http://localhost:${PORT}`);
   console.log(`📊 Health check: http://localhost:${PORT}/health`);
   console.log(`🔍 Task Analysis: POST http://localhost:${PORT}/api/analyze`);
   console.log(`📚 Feature Browser: GET http://localhost:${PORT}/api/features`);

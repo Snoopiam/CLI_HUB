@@ -4,7 +4,7 @@
  * =============================================================================
  *
  * Browse all available features, agents, and integrations.
- * Consistent with PRISM design language.
+ * Consistent with MjolnirAI design language.
  * =============================================================================
  */
 
@@ -108,7 +108,7 @@ export default function AgentsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              PRISM · Feature Explorer
+              MjolnirAI · Feature Explorer
             </motion.p>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 gradient-text">
               Explore Features

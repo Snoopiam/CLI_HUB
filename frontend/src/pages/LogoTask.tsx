@@ -4,7 +4,7 @@
  * =============================================================================
  *
  * A step-by-step workflow for specific tasks like logo creation.
- * Consistent with PRISM design language.
+ * Consistent with MjolnirAI design language.
  * =============================================================================
  */
 
@@ -169,7 +169,7 @@ export default function LogoTask() {
               className="text-sm font-medium tracking-widest uppercase mb-4"
               style={{ color: colors.accent.primary }}
             >
-              PRISM · Guided Workflow
+              MjolnirAI · Guided Workflow
             </motion.p>
             <h1
               className="text-4xl md:text-5xl font-bold tracking-tight mb-4"

@@ -1,6 +1,6 @@
 /**
  * =============================================================================
- * DESIGN SYSTEM - Personal AI Hub
+ * DESIGN SYSTEM - MjolnirAI
  * =============================================================================
  *
  * A distinctive design language: Refined. Intelligent. Purposeful.

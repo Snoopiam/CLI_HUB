@@ -1,5 +1,5 @@
 /**
- * Card - Unified card abstraction for PRISM
+ * Card - Unified card abstraction for MjolnirAI
  *
  * Provides consistent card styling across all pages with variant support:
  * - default: Standard dark card

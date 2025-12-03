@@ -1,7 +1,7 @@
 /**
- * Header - PRISM Navigation
+ * Header - MjolnirAI Navigation
  *
- * A refined, distinctive header with the PRISM brand identity.
+ * A refined, distinctive header with the MjolnirAI brand identity.
  * Clean navigation with visual feedback.
  */
 
@@ -36,7 +36,7 @@ export default function Header() {
       />
 
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo - PRISM */}
+        {/* Logo - MjolnirAI */}
         <Link to="/" className="flex items-center gap-3 group">
           {/* Logo mark */}
           <motion.div
@@ -47,7 +47,7 @@ export default function Header() {
             whileHover={{ scale: 1.05, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
           >
-            {/* Prism icon */}
+            {/* Mjolnir icon (hammer) */}
             <svg
               width="20"
               height="20"
@@ -56,18 +56,18 @@ export default function Header() {
               style={{ color: colors.text.inverse }}
             >
               <path
-                d="M12 2L2 19h20L12 2z"
+                d="M6 2h12v6H6V2z"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
-                d="M12 2v17"
+                d="M12 8v14M9 22h6"
                 stroke="currentColor"
-                strokeWidth="1.5"
+                strokeWidth="2"
                 strokeLinecap="round"
-                opacity="0.5"
+                strokeLinejoin="round"
               />
             </svg>
             {/* Shine effect */}
@@ -87,7 +87,7 @@ export default function Header() {
               className="text-lg font-bold tracking-wide"
               style={{ color: colors.text.primary }}
             >
-              PRISM
+              MjolnirAI ⚡
             </span>
             <span
               className="text-[10px] font-medium tracking-widest uppercase -mt-1"

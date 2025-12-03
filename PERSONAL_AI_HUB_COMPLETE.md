@@ -6,19 +6,19 @@ A fully functional **AI-powered workflow assistant** that helps you with creativ
 
 ### 🏗️ Architecture
 
-**Frontend** (`Labs/PersonalAIHub/frontend`)
+**Frontend** (`Labs/MjolnirAI/frontend`)
 - Vite + React 18 + TypeScript
 - Tailwind CSS for styling
 - React Router for navigation
 - Clean, modern UI with dark theme
 
-**Backend** (`Labs/PersonalAIHub/backend`)
+**Backend** (`Labs/MjolnirAI/backend`)
 - Node + Express + TypeScript
 - Claude AI integration (Anthropic SDK)
 - Config-driven workflow system
 - REST API for frontend communication
 
-**Config System** (`Labs/PersonalAIHub/frontend/config/`)
+**Config System** (`Labs/MjolnirAI/frontend/config/`)
 - JSON-based workflow definitions
 - Easy to extend with new tasks
 - Projects catalog for SnoopLabs integration
@@ -26,7 +26,7 @@ A fully functional **AI-powered workflow assistant** that helps you with creativ
 ## 📁 Project Structure
 
 ```
-Labs/PersonalAIHub/
+Labs/MjolnirAI/
 ├── frontend/                        # Frontend app
 │   ├── config/
 │   │   ├── projects.json           # Your SnoopLabs projects
@@ -71,13 +71,13 @@ Labs/PersonalAIHub/
 
 **Frontend:**
 ```powershell
-cd "C:\SnoopLabs\Labs\PersonalAIHub\frontend"
+cd "C:\SnoopLabs\Labs\MjolnirAI\frontend"
 npm install
 ```
 
 **Backend:**
 ```powershell
-cd "C:\SnoopLabs\Labs\PersonalAIHub\backend"
+cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
 npm install
 ```
 
@@ -85,7 +85,7 @@ npm install
 
 Create `.env` in the backend:
 ```powershell
-cd "C:\SnoopLabs\Labs\PersonalAIHub\backend"
+cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
 Copy-Item .env.example .env
 ```
 
@@ -100,13 +100,13 @@ FRONTEND_URL=http://localhost:5174
 
 **Terminal 1 - Backend:**
 ```powershell
-cd "C:\SnoopLabs\Labs\PersonalAIHub\backend"
+cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
 npm run dev
 ```
 
 **Terminal 2 - Frontend:**
 ```powershell
-cd "C:\SnoopLabs\Labs\PersonalAIHub\frontend"
+cd "C:\SnoopLabs\Labs\MjolnirAI\frontend"
 npm run dev
 ```
 
@@ -260,9 +260,9 @@ npx claude-code-templates@latest --version
 ## 📚 Resources
 
 **Documentation:**
-- Frontend Setup: `Labs/PersonalAIHub/frontend/SETUP_GUIDE.md`
-- Backend Readme: `Labs/PersonalAIHub/backend/README.md`
-- This Summary: `Labs/PersonalAIHub/PERSONAL_AI_HUB_COMPLETE.md`
+- Frontend Setup: `Labs/MjolnirAI/frontend/SETUP_GUIDE.md`
+- Backend Readme: `Labs/MjolnirAI/backend/README.md`
+- This Summary: `Labs/MjolnirAI/PERSONAL_AI_HUB_COMPLETE.md`
 
 **External:**
 - AITMPL Agents: https://www.aitmpl.com/agents
