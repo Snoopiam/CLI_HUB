@@ -1,0 +1,288 @@
+{
+  "categories": [
+    {
+      "id": "web-frontend",
+      "name": "Web Frontend Development",
+      "description": "Building user interfaces, React/Vue/Angular apps, CSS, responsive design",
+      "keywords": ["react", "vue", "angular", "frontend", "html", "css", "tailwind", "component", "ui", "ux", "responsive", "jsx", "tsx", "svelte", "nextjs", "nuxt", "gatsby", "vite", "webpack"],
+      "defaultFeatures": {
+        "agents": ["react-specialist", "typescript-pro", "nextjs-developer"],
+        "skills": ["webapp-testing"],
+        "commands": ["generate-tests"],
+        "settings": []
+      }
+    },
+    {
+      "id": "web-backend",
+      "name": "Backend Development",
+      "description": "APIs, servers, microservices, authentication, REST, GraphQL",
+      "keywords": ["api", "rest", "graphql", "backend", "server", "express", "fastapi", "django", "flask", "nodejs", "authentication", "jwt", "oauth", "middleware", "endpoint", "route"],
+      "defaultFeatures": {
+        "agents": ["fastapi-pro", "python-pro", "golang-pro"],
+        "skills": [],
+        "mcps": ["github"],
+        "commands": ["document-api"],
+        "settings": []
+      }
+    },
+    {
+      "id": "database",
+      "name": "Database & Data",
+      "description": "SQL, NoSQL, queries, migrations, data modeling, optimization",
+      "keywords": ["database", "sql", "postgres", "postgresql", "mysql", "mongodb", "redis", "query", "migration", "schema", "orm", "prisma", "sequelize", "knex", "nosql", "data", "index"],
+      "defaultFeatures": {
+        "agents": ["database-optimizer", "data-scientist"],
+        "mcps": ["postgres", "mongodb"],
+        "commands": [],
+        "settings": []
+      }
+    },
+    {
+      "id": "devops",
+      "name": "DevOps & Infrastructure",
+      "description": "CI/CD, Docker, Kubernetes, cloud, deployment, monitoring",
+      "keywords": ["devops", "docker", "kubernetes", "k8s", "ci/cd", "pipeline", "deploy", "deployment", "container", "helm", "terraform", "ansible", "jenkins", "github-actions", "gitlab-ci", "argocd", "monitoring", "prometheus", "grafana"],
+      "defaultFeatures": {
+        "agents": ["kubernetes-architect", "deployment-engineer", "incident-responder"],
+        "mcps": ["github"],
+        "hooks": ["command-logger"],
+        "commands": [],
+        "settings": []
+      }
+    },
+    {
+      "id": "cloud",
+      "name": "Cloud Services",
+      "description": "AWS, Azure, GCP, serverless, cloud architecture",
+      "keywords": ["aws", "azure", "gcp", "google-cloud", "cloud", "s3", "ec2", "lambda", "serverless", "cloudformation", "cdk", "functions", "storage", "compute"],
+      "defaultFeatures": {
+        "agents": ["cloud-architect"],
+        "mcps": ["aws"],
+        "commands": [],
+        "settings": []
+      }
+    },
+    {
+      "id": "security",
+      "name": "Security & Compliance",
+      "description": "Security audits, vulnerability scanning, authentication, encryption",
+      "keywords": ["security", "audit", "vulnerability", "owasp", "penetration", "pentest", "encryption", "ssl", "tls", "compliance", "gdpr", "hipaa", "soc2", "authentication", "authorization"],
+      "defaultFeatures": {
+        "agents": ["security-auditor"],
+        "hooks": ["security-audit"],
+        "settings": ["permissions-deny", "sandbox-filesystem"],
+        "commands": []
+      }
+    },
+    {
+      "id": "testing",
+      "name": "Testing & QA",
+      "description": "Unit tests, integration tests, E2E, TDD, test automation",
+      "keywords": ["test", "testing", "unit", "integration", "e2e", "end-to-end", "tdd", "jest", "vitest", "pytest", "mocha", "cypress", "playwright", "coverage", "qa", "quality"],
+      "defaultFeatures": {
+        "agents": ["test-automator"],
+        "skills": ["webapp-testing"],
+        "commands": ["generate-tests"],
+        "settings": []
+      }
+    },
+    {
+      "id": "debugging",
+      "name": "Debugging & Troubleshooting",
+      "description": "Error fixing, debugging, performance issues, log analysis",
+      "keywords": ["debug", "error", "bug", "fix", "issue", "problem", "troubleshoot", "crash", "exception", "log", "stack-trace", "breakpoint"],
+      "defaultFeatures": {
+        "agents": ["debugger"],
+        "skills": ["error-debugger"],
+        "commands": ["fix-error"],
+        "hooks": ["command-logger"],
+        "settings": []
+      }
+    },
+    {
+      "id": "performance",
+      "name": "Performance Optimization",
+      "description": "Speed optimization, profiling, caching, scalability",
+      "keywords": ["performance", "optimize", "optimization", "speed", "fast", "slow", "profiling", "cache", "caching", "scalability", "memory", "cpu", "bottleneck", "latency"],
+      "defaultFeatures": {
+        "agents": ["performance-engineer"],
+        "commands": ["optimize-bundle"],
+        "settings": []
+      }
+    },
+    {
+      "id": "ai-ml",
+      "name": "AI & Machine Learning",
+      "description": "LLM integration, AI agents, ML models, data science, RAG",
+      "keywords": ["ai", "ml", "machine-learning", "llm", "gpt", "claude", "openai", "anthropic", "rag", "embeddings", "vector", "agent", "chatbot", "nlp", "neural", "model", "training", "inference"],
+      "defaultFeatures": {
+        "agents": ["ai-engineer", "prompt-engineer", "data-scientist"],
+        "skills": ["mcp-builder"],
+        "mcps": [],
+        "commands": [],
+        "settings": []
+      }
+    },
+    {
+      "id": "documentation",
+      "name": "Documentation",
+      "description": "API docs, README, technical writing, code comments",
+      "keywords": ["documentation", "docs", "readme", "api-docs", "swagger", "openapi", "jsdoc", "typedoc", "comment", "write", "technical"],
+      "defaultFeatures": {
+        "agents": [],
+        "claudemd": ["project-structure", "coding-conventions"],
+        "commands": ["document-api"],
+        "settings": []
+      }
+    },
+    {
+      "id": "code-quality",
+      "name": "Code Quality & Review",
+      "description": "Code review, refactoring, linting, best practices",
+      "keywords": ["review", "refactor", "lint", "eslint", "prettier", "code-quality", "clean-code", "best-practices", "solid", "dry", "kiss"],
+      "defaultFeatures": {
+        "agents": ["code-reviewer"],
+        "hooks": ["pre-commit-lint"],
+        "commands": ["review-pr"],
+        "settings": []
+      }
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile Development",
+      "description": "iOS, Android, React Native, Flutter, mobile apps",
+      "keywords": ["mobile", "ios", "android", "react-native", "flutter", "swift", "kotlin", "app", "native", "expo"],
+      "defaultFeatures": {
+        "agents": ["react-specialist"],
+        "skills": [],
+        "commands": [],
+        "settings": []
+      }
+    },
+    {
+      "id": "creative",
+      "name": "Creative & Design",
+      "description": "Logo design, branding, UI design, graphics",
+      "keywords": ["logo", "design", "brand", "branding", "graphic", "visual", "creative", "ui", "icon", "illustration", "figma", "canva"],
+      "defaultFeatures": {
+        "agents": [],
+        "skills": ["logo-builder"],
+        "commands": [],
+        "settings": []
+      }
+    },
+    {
+      "id": "documents",
+      "name": "Document Processing",
+      "description": "PDF, Word, Excel, PowerPoint, document generation",
+      "keywords": ["pdf", "word", "excel", "document", "docx", "xlsx", "pptx", "spreadsheet", "presentation", "report", "generate"],
+      "defaultFeatures": {
+        "agents": [],
+        "skills": ["pdf", "xlsx", "docx", "pptx"],
+        "commands": [],
+        "settings": []
+      }
+    },
+    {
+      "id": "payments",
+      "name": "Payments & Billing",
+      "description": "Stripe, PayPal, subscriptions, invoicing",
+      "keywords": ["payment", "stripe", "paypal", "billing", "subscription", "invoice", "checkout", "cart", "ecommerce"],
+      "defaultFeatures": {
+        "agents": [],
+        "mcps": ["stripe"],
+        "commands": [],
+        "settings": []
+      }
+    },
+    {
+      "id": "communication",
+      "name": "Communication & Notifications",
+      "description": "Slack, email, webhooks, notifications",
+      "keywords": ["slack", "email", "notification", "webhook", "message", "chat", "alert", "sms", "push"],
+      "defaultFeatures": {
+        "agents": [],
+        "mcps": ["slack"],
+        "hooks": ["notification-hook"],
+        "commands": [],
+        "settings": []
+      }
+    },
+    {
+      "id": "project-setup",
+      "name": "Project Setup & Configuration",
+      "description": "New project setup, configuration, environment",
+      "keywords": ["setup", "init", "initialize", "configure", "config", "environment", "env", "scaffold", "boilerplate", "template", "new-project"],
+      "defaultFeatures": {
+        "agents": [],
+        "skills": ["skill-creator"],
+        "claudemd": ["project-structure", "coding-conventions", "team-workflows"],
+        "settings": ["model-default", "permissions-ask"],
+        "commands": []
+      }
+    }
+  ],
+  "taskPatterns": [
+    {
+      "pattern": "create|build|make|develop|implement",
+      "boost": ["skills", "agents"],
+      "description": "Creation tasks benefit from specialized skills and agents"
+    },
+    {
+      "pattern": "fix|debug|solve|troubleshoot|error",
+      "boost": ["agents"],
+      "priorityAgents": ["debugger"],
+      "description": "Debugging tasks should prioritize debugger agent"
+    },
+    {
+      "pattern": "review|audit|check|analyze",
+      "boost": ["agents", "hooks"],
+      "priorityAgents": ["code-reviewer", "security-auditor"],
+      "description": "Review tasks benefit from reviewer agents"
+    },
+    {
+      "pattern": "deploy|release|ship|publish",
+      "boost": ["mcps", "hooks"],
+      "priorityAgents": ["deployment-engineer"],
+      "description": "Deployment tasks need MCP integrations"
+    },
+    {
+      "pattern": "optimize|improve|speed|performance",
+      "boost": ["agents"],
+      "priorityAgents": ["performance-engineer"],
+      "description": "Optimization tasks need performance expertise"
+    },
+    {
+      "pattern": "test|coverage|tdd|qa",
+      "boost": ["agents", "commands"],
+      "priorityAgents": ["test-automator"],
+      "description": "Testing tasks need test automation"
+    },
+    {
+      "pattern": "document|readme|api-doc",
+      "boost": ["claudemd", "commands"],
+      "description": "Documentation tasks need CLAUDE.md and doc commands"
+    },
+    {
+      "pattern": "secure|protect|vulnerability|compliance",
+      "boost": ["agents", "settings", "hooks"],
+      "priorityAgents": ["security-auditor"],
+      "description": "Security tasks need comprehensive protection"
+    },
+    {
+      "pattern": "integrate|connect|api|external",
+      "boost": ["mcps", "skills"],
+      "description": "Integration tasks benefit from MCP servers"
+    },
+    {
+      "pattern": "setup|configure|init|start",
+      "boost": ["claudemd", "settings"],
+      "description": "Setup tasks need project configuration"
+    }
+  ],
+  "complexityIndicators": {
+    "simple": ["quick", "small", "simple", "basic", "single", "one"],
+    "moderate": ["feature", "component", "module", "refactor", "update"],
+    "complex": ["architecture", "system", "platform", "redesign", "migration", "enterprise", "scale", "distributed"]
+  }
+}

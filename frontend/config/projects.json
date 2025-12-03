@@ -1,0 +1,48 @@
+[
+  {
+    "id": "agentlabs",
+    "name": "AgentLabs AI Toolkit",
+    "path": "C:\\SnoopLabs\\Labs\\Lovable_AgentLabs_AI_Toolkit",
+    "category": "text",
+    "description": "Real estate AI toolkit with notes generator, factsheet generator, and more",
+    "startCommand": "npm run dev",
+    "docsLink": "https://github.com/Snoopiam/agentlabs-ai-toolkit"
+  },
+  {
+    "id": "rapidraw",
+    "name": "RapidRAW",
+    "path": "C:\\SnoopLabs\\Labs\\RapidRAW",
+    "category": "image",
+    "description": "Tauri desktop RAW image editor with GPU acceleration",
+    "startCommand": "npm start",
+    "docsLink": "https://github.com/CyberTimon/RapidRAW"
+  },
+  {
+    "id": "validai",
+    "name": "ValidAI",
+    "path": "C:\\SnoopLabs\\Labs\\ValidAI",
+    "category": "text",
+    "description": "Google AI Studio-based validation app",
+    "startCommand": "npm run dev",
+    "docsLink": null
+  },
+  {
+    "id": "creatify",
+    "name": "SnoopLABS Creatify",
+    "path": "C:\\SnoopLabs\\Labs\\SnoopLABS_Creatify",
+    "category": "creative",
+    "description": "Creative tooling applications",
+    "startCommand": "npm run dev",
+    "docsLink": null
+  },
+  {
+    "id": "inspector",
+    "name": "Inspector",
+    "path": "C:\\SnoopLabs\\Labs\\Inspector",
+    "category": "dev-tools",
+    "description": "Python-based code inspection and analysis tool",
+    "startCommand": "python inspect.py",
+    "docsLink": null
+  }
+]
+

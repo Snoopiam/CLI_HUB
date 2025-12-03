@@ -1,0 +1,608 @@
+{
+  "skills": [
+    {
+      "id": "pdf",
+      "name": "PDF Skill",
+      "description": "Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms",
+      "whenToUse": "When you need to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale",
+      "installCommand": "Available via plugin: document-skills@anthropic-agent-skills",
+      "source": "anthropic-plugin",
+      "category": "document-processing",
+      "keywords": ["pdf", "document", "form", "extract", "merge", "split"]
+    },
+    {
+      "id": "xlsx",
+      "name": "Excel/Spreadsheet Skill",
+      "description": "Comprehensive spreadsheet creation, editing, and analysis with support for formulas, formatting, data analysis, and visualization",
+      "whenToUse": "When working with spreadsheets (.xlsx, .xlsm, .csv, .tsv) for creating, reading, analyzing data, or modifying while preserving formulas",
+      "installCommand": "Available via plugin: document-skills@anthropic-agent-skills",
+      "source": "anthropic-plugin",
+      "category": "document-processing",
+      "keywords": ["excel", "spreadsheet", "csv", "data", "formulas", "xlsx"]
+    },
+    {
+      "id": "docx",
+      "name": "Word Document Skill",
+      "description": "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation",
+      "whenToUse": "When working with professional documents (.docx files) for creating, modifying, or working with tracked changes",
+      "installCommand": "Available via plugin: document-skills@anthropic-agent-skills",
+      "source": "anthropic-plugin",
+      "category": "document-processing",
+      "keywords": ["word", "document", "docx", "tracked changes", "comments"]
+    },
+    {
+      "id": "pptx",
+      "name": "PowerPoint Skill",
+      "description": "Presentation creation, editing, and analysis for working with presentations (.pptx files)",
+      "whenToUse": "When creating new presentations, modifying content, working with layouts, or adding speaker notes",
+      "installCommand": "Available via plugin: document-skills@anthropic-agent-skills",
+      "source": "anthropic-plugin",
+      "category": "document-processing",
+      "keywords": ["powerpoint", "presentation", "slides", "pptx"]
+    },
+    {
+      "id": "mcp-builder",
+      "name": "MCP Builder Skill",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services",
+      "whenToUse": "When building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript",
+      "installCommand": "Create SKILL.md in .claude/skills/mcp-builder/",
+      "source": "custom",
+      "category": "development",
+      "keywords": ["mcp", "integration", "api", "protocol", "server"]
+    },
+    {
+      "id": "skill-creator",
+      "name": "Skill Creator",
+      "description": "Guide for creating effective Claude Code skills with specialized knowledge, workflows, or tool integrations",
+      "whenToUse": "When you want to create a new skill or update an existing skill that extends Claude's capabilities",
+      "installCommand": "Create SKILL.md in .claude/skills/skill-creator/",
+      "source": "custom",
+      "category": "meta",
+      "keywords": ["skill", "create", "extend", "workflow"]
+    },
+    {
+      "id": "error-debugger",
+      "name": "Error Debugger Skill",
+      "description": "Systematic debugging approach for any error with structured error analysis",
+      "whenToUse": "When encountering errors, bugs, or unexpected behavior in code",
+      "installCommand": "Create SKILL.md in .claude/skills/error-debugger/",
+      "source": "custom",
+      "category": "development",
+      "keywords": ["debug", "error", "bug", "fix", "troubleshoot"]
+    },
+    {
+      "id": "logo-builder",
+      "name": "Logo Builder Skill",
+      "description": "Interactive logo designer that creates SVG and PNG logos through guided conversation",
+      "whenToUse": "When the user wants to create a logo, design a brand mark, build an icon, or needs visual identity design",
+      "installCommand": "Create SKILL.md in .claude/skills/logo-builder/",
+      "source": "custom",
+      "category": "creative",
+      "keywords": ["logo", "design", "brand", "icon", "svg", "visual"]
+    },
+    {
+      "id": "webapp-testing",
+      "name": "Web App Testing Skill",
+      "description": "Toolkit for interacting with and testing local web applications using Playwright",
+      "whenToUse": "When verifying frontend functionality, debugging UI behavior, capturing browser screenshots, or viewing browser logs",
+      "installCommand": "Create SKILL.md in .claude/skills/webapp-testing/",
+      "source": "custom",
+      "category": "testing",
+      "keywords": ["test", "playwright", "browser", "ui", "e2e", "screenshot"]
+    }
+  ],
+  "agents": [
+    {
+      "id": "debugger",
+      "name": "Debugger",
+      "description": "Debugging specialist for errors, test failures, and unexpected behavior",
+      "whenToUse": "Proactively when encountering any issues, errors, or unexpected behavior",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "development",
+      "keywords": ["debug", "error", "bug", "fix", "troubleshoot", "issue"]
+    },
+    {
+      "id": "code-reviewer",
+      "name": "Code Reviewer",
+      "description": "Elite code review expert specializing in modern AI-powered code analysis, security vulnerabilities, performance optimization",
+      "whenToUse": "Proactively for code quality assurance after writing significant code",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "development",
+      "keywords": ["review", "code", "quality", "security", "performance"]
+    },
+    {
+      "id": "security-auditor",
+      "name": "Security Auditor",
+      "description": "Expert security auditor specializing in DevSecOps, comprehensive cybersecurity, and compliance frameworks",
+      "whenToUse": "Proactively for security audits, DevSecOps, or compliance implementation",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "security",
+      "keywords": ["security", "audit", "vulnerability", "compliance", "owasp"]
+    },
+    {
+      "id": "test-automator",
+      "name": "Test Automator",
+      "description": "Master AI-powered test automation with modern frameworks, self-healing tests, and comprehensive quality engineering",
+      "whenToUse": "Proactively for testing automation or quality assurance",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "testing",
+      "keywords": ["test", "automation", "qa", "quality", "ci/cd"]
+    },
+    {
+      "id": "performance-engineer",
+      "name": "Performance Engineer",
+      "description": "Expert performance engineer specializing in modern observability, application optimization, and scalable system performance",
+      "whenToUse": "Proactively for performance optimization, observability, or scalability challenges",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "performance",
+      "keywords": ["performance", "optimization", "scalability", "monitoring", "observability"]
+    },
+    {
+      "id": "react-specialist",
+      "name": "React Specialist",
+      "description": "Expert React specialist mastering React 18+ with modern patterns and ecosystem",
+      "whenToUse": "For React development, performance optimization, advanced hooks, server components",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "frontend",
+      "keywords": ["react", "frontend", "hooks", "components", "jsx"]
+    },
+    {
+      "id": "typescript-pro",
+      "name": "TypeScript Pro",
+      "description": "Master TypeScript with advanced types, generics, and strict type safety",
+      "whenToUse": "Proactively for TypeScript architecture, type inference optimization, or advanced typing patterns",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "development",
+      "keywords": ["typescript", "types", "generics", "type-safety"]
+    },
+    {
+      "id": "python-pro",
+      "name": "Python Pro",
+      "description": "Master Python 3.12+ with modern features, async programming, performance optimization",
+      "whenToUse": "Proactively for Python development, optimization, or advanced Python patterns",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "development",
+      "keywords": ["python", "async", "fastapi", "django", "flask"]
+    },
+    {
+      "id": "database-optimizer",
+      "name": "Database Optimizer",
+      "description": "Expert database optimizer specializing in modern performance tuning, query optimization, and scalable architectures",
+      "whenToUse": "Proactively for database optimization, performance issues, or scalability challenges",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "database",
+      "keywords": ["database", "sql", "query", "optimization", "performance"]
+    },
+    {
+      "id": "kubernetes-architect",
+      "name": "Kubernetes Architect",
+      "description": "Expert Kubernetes architect specializing in cloud-native infrastructure, advanced GitOps workflows",
+      "whenToUse": "Proactively for K8s architecture, GitOps implementation, or cloud-native platform design",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "devops",
+      "keywords": ["kubernetes", "k8s", "docker", "container", "gitops", "helm"]
+    },
+    {
+      "id": "cloud-architect",
+      "name": "Cloud Architect",
+      "description": "Expert cloud architect specializing in AWS/Azure/GCP multi-cloud infrastructure design",
+      "whenToUse": "Proactively for cloud architecture, cost optimization, migration planning, or multi-cloud strategies",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "cloud",
+      "keywords": ["aws", "azure", "gcp", "cloud", "terraform", "infrastructure"]
+    },
+    {
+      "id": "ai-engineer",
+      "name": "AI Engineer",
+      "description": "Build production-ready LLM applications, advanced RAG systems, and intelligent agents",
+      "whenToUse": "Proactively for LLM features, chatbots, AI agents, or AI-powered applications",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "ai-ml",
+      "keywords": ["ai", "llm", "rag", "agent", "chatbot", "ml"]
+    },
+    {
+      "id": "fastapi-pro",
+      "name": "FastAPI Pro",
+      "description": "Build high-performance async APIs with FastAPI, SQLAlchemy 2.0, and Pydantic V2",
+      "whenToUse": "Proactively for FastAPI development, async optimization, or API architecture",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "backend",
+      "keywords": ["fastapi", "api", "async", "python", "pydantic"]
+    },
+    {
+      "id": "nextjs-developer",
+      "name": "Next.js Developer",
+      "description": "Expert Next.js developer mastering Next.js 14+ with App Router and full-stack features",
+      "whenToUse": "For Next.js development with server components, server actions, performance optimization",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "frontend",
+      "keywords": ["nextjs", "react", "ssr", "app-router", "vercel"]
+    },
+    {
+      "id": "golang-pro",
+      "name": "Golang Pro",
+      "description": "Master Go 1.21+ with modern patterns, advanced concurrency, performance optimization",
+      "whenToUse": "Proactively for Go development, architecture design, or performance optimization",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "development",
+      "keywords": ["go", "golang", "concurrency", "goroutines"]
+    },
+    {
+      "id": "rust-engineer",
+      "name": "Rust Engineer",
+      "description": "Expert Rust developer specializing in systems programming, memory safety, and zero-cost abstractions",
+      "whenToUse": "For Rust development, memory safety, performance optimization, systems programming",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "development",
+      "keywords": ["rust", "systems", "memory", "performance", "wasm"]
+    },
+    {
+      "id": "prompt-engineer",
+      "name": "Prompt Engineer",
+      "description": "Expert prompt engineer specializing in advanced prompting techniques, LLM optimization",
+      "whenToUse": "When building AI features, improving agent performance, or crafting system prompts",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "ai-ml",
+      "keywords": ["prompt", "llm", "ai", "optimization", "engineering"]
+    },
+    {
+      "id": "data-scientist",
+      "name": "Data Scientist",
+      "description": "Expert data scientist for advanced analytics, machine learning, and statistical modeling",
+      "whenToUse": "Proactively for data analysis tasks, ML modeling, statistical analysis, and data-driven insights",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "ai-ml",
+      "keywords": ["data", "ml", "analytics", "statistics", "modeling"]
+    },
+    {
+      "id": "deployment-engineer",
+      "name": "Deployment Engineer",
+      "description": "Expert deployment engineer specializing in modern CI/CD pipelines, GitOps workflows",
+      "whenToUse": "Proactively for CI/CD design, GitOps implementation, or deployment automation",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "devops",
+      "keywords": ["deploy", "ci/cd", "gitops", "pipeline", "automation"]
+    },
+    {
+      "id": "incident-responder",
+      "name": "Incident Responder",
+      "description": "Expert SRE incident responder specializing in rapid problem resolution, modern observability",
+      "whenToUse": "Immediately for production incidents or SRE practices",
+      "installCommand": "Built-in agent - no installation needed",
+      "source": "built-in",
+      "category": "devops",
+      "keywords": ["incident", "sre", "production", "outage", "monitoring"]
+    }
+  ],
+  "mcps": [
+    {
+      "id": "github",
+      "name": "GitHub MCP",
+      "description": "Integration with GitHub for issue tracking, PR creation, code operations, and repository management",
+      "whenToUse": "When working with GitHub repositories, issues, pull requests, or code reviews",
+      "installCommand": "claude mcp add --transport http github https://github.com/user/mcp-server",
+      "source": "official",
+      "category": "development",
+      "keywords": ["github", "git", "repository", "issues", "pr", "code"]
+    },
+    {
+      "id": "postgres",
+      "name": "PostgreSQL MCP",
+      "description": "Direct PostgreSQL database access for queries, schema inspection, and data operations",
+      "whenToUse": "When working with PostgreSQL databases for queries, migrations, or data analysis",
+      "installCommand": "claude mcp add --transport stdio postgres -- npx @anthropic/mcp-postgres",
+      "source": "official",
+      "category": "database",
+      "keywords": ["postgres", "postgresql", "database", "sql", "query"]
+    },
+    {
+      "id": "filesystem",
+      "name": "Filesystem MCP",
+      "description": "Enhanced filesystem operations with advanced search, batch operations, and monitoring",
+      "whenToUse": "When needing advanced file operations beyond standard Claude Code capabilities",
+      "installCommand": "claude mcp add --transport stdio filesystem -- npx @anthropic/mcp-filesystem",
+      "source": "official",
+      "category": "system",
+      "keywords": ["file", "filesystem", "directory", "search", "batch"]
+    },
+    {
+      "id": "slack",
+      "name": "Slack MCP",
+      "description": "Slack integration for sending messages, reading channels, and managing notifications",
+      "whenToUse": "When building Slack integrations or automating team communications",
+      "installCommand": "claude mcp add --transport http slack https://your-slack-mcp-server",
+      "source": "community",
+      "category": "communication",
+      "keywords": ["slack", "chat", "message", "notification", "team"]
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe MCP",
+      "description": "Stripe payment integration for managing customers, subscriptions, and transactions",
+      "whenToUse": "When implementing payment processing, subscriptions, or financial operations",
+      "installCommand": "claude mcp add --transport http stripe https://your-stripe-mcp-server",
+      "source": "community",
+      "category": "payments",
+      "keywords": ["stripe", "payment", "subscription", "billing", "checkout"]
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB MCP",
+      "description": "MongoDB database access for document operations, queries, and aggregations",
+      "whenToUse": "When working with MongoDB databases for CRUD operations or data analysis",
+      "installCommand": "claude mcp add --transport stdio mongodb -- npx @anthropic/mcp-mongodb",
+      "source": "community",
+      "category": "database",
+      "keywords": ["mongodb", "nosql", "database", "document", "query"]
+    },
+    {
+      "id": "aws",
+      "name": "AWS MCP",
+      "description": "AWS services integration for cloud infrastructure management",
+      "whenToUse": "When managing AWS resources, deploying infrastructure, or working with AWS services",
+      "installCommand": "claude mcp add --transport http aws https://your-aws-mcp-server",
+      "source": "community",
+      "category": "cloud",
+      "keywords": ["aws", "cloud", "s3", "ec2", "lambda", "infrastructure"]
+    }
+  ],
+  "hooks": [
+    {
+      "id": "pre-commit-lint",
+      "name": "Pre-Commit Linting",
+      "description": "Automatically run linting before any file write operation",
+      "whenToUse": "When you want to enforce code quality standards automatically",
+      "installCommand": "Add to .claude/settings.json under 'hooks.PreToolUse'",
+      "source": "custom",
+      "category": "quality",
+      "keywords": ["lint", "format", "eslint", "prettier", "quality"],
+      "configExample": {
+        "PreToolUse": [{
+          "matcher": "write",
+          "hooks": [{
+            "type": "command",
+            "command": "npm run lint --fix"
+          }]
+        }]
+      }
+    },
+    {
+      "id": "security-audit",
+      "name": "Security Audit Hook",
+      "description": "Block operations on sensitive files or directories",
+      "whenToUse": "When you need to protect sensitive files from accidental modification",
+      "installCommand": "Add to .claude/settings.json under 'hooks.PreToolUse'",
+      "source": "custom",
+      "category": "security",
+      "keywords": ["security", "audit", "block", "protect", "sensitive"],
+      "configExample": {
+        "PreToolUse": [{
+          "matcher": "**/secrets/*",
+          "hooks": [{
+            "type": "command",
+            "command": "echo 'Blocked: sensitive file' && exit 2"
+          }]
+        }]
+      }
+    },
+    {
+      "id": "command-logger",
+      "name": "Command Logger",
+      "description": "Log all bash commands for audit trail",
+      "whenToUse": "When you need an audit log of all commands executed",
+      "installCommand": "Add to .claude/settings.json under 'hooks.PostToolUse'",
+      "source": "custom",
+      "category": "audit",
+      "keywords": ["log", "audit", "track", "command", "history"],
+      "configExample": {
+        "PostToolUse": [{
+          "matcher": "bash",
+          "hooks": [{
+            "type": "command",
+            "command": "jq -r '.tool_input.command' >> ~/.claude/command-log.txt"
+          }]
+        }]
+      }
+    },
+    {
+      "id": "notification-hook",
+      "name": "Task Notification",
+      "description": "Send notifications when Claude completes major tasks",
+      "whenToUse": "When you want to be notified of task completions via Slack, email, etc.",
+      "installCommand": "Add to .claude/settings.json under 'hooks.Stop'",
+      "source": "custom",
+      "category": "notification",
+      "keywords": ["notification", "alert", "slack", "complete", "done"],
+      "configExample": {
+        "Stop": [{
+          "matcher": "*",
+          "hooks": [{
+            "type": "command",
+            "command": "curl -X POST your-webhook-url -d 'Task completed'"
+          }]
+        }]
+      }
+    }
+  ],
+  "commands": [
+    {
+      "id": "review-pr",
+      "name": "/review-pr",
+      "description": "Review a pull request by number",
+      "whenToUse": "When you want to quickly review a PR with a single command",
+      "installCommand": "Create .claude/commands/review-pr.md",
+      "source": "custom",
+      "category": "development",
+      "keywords": ["review", "pr", "pull-request", "code-review"],
+      "fileContent": "---\nname: review-pr\ndescription: Review a pull request\nargument-hint: <pr-number>\n---\n\nReview PR #$1 focusing on:\n1. Code quality and best practices\n2. Security vulnerabilities\n3. Performance implications\n4. Test coverage"
+    },
+    {
+      "id": "generate-tests",
+      "name": "/generate-tests",
+      "description": "Generate comprehensive tests for a file or component",
+      "whenToUse": "When you need to quickly generate tests for existing code",
+      "installCommand": "Create .claude/commands/generate-tests.md",
+      "source": "custom",
+      "category": "testing",
+      "keywords": ["test", "generate", "unit", "coverage"],
+      "fileContent": "---\nname: generate-tests\ndescription: Generate tests for a file\nargument-hint: <file-path>\n---\n\nAnalyze @$1 and generate comprehensive tests:\n1. Unit tests for all functions\n2. Edge cases and error conditions\n3. Integration tests if applicable\n4. Mock external dependencies"
+    },
+    {
+      "id": "optimize-bundle",
+      "name": "/optimize-bundle",
+      "description": "Analyze and optimize JavaScript bundle size",
+      "whenToUse": "When your bundle is too large and needs optimization",
+      "installCommand": "Create .claude/commands/optimize-bundle.md",
+      "source": "custom",
+      "category": "performance",
+      "keywords": ["bundle", "optimize", "size", "webpack", "vite"],
+      "fileContent": "---\nname: optimize-bundle\ndescription: Optimize bundle size\n---\n\nAnalyze the current bundle:\n1. Run bundle analyzer\n2. Identify large dependencies\n3. Suggest code splitting opportunities\n4. Recommend tree-shaking improvements"
+    },
+    {
+      "id": "fix-error",
+      "name": "/fix-error",
+      "description": "Debug and fix a specific error message",
+      "whenToUse": "When you have an error message and need quick help fixing it",
+      "installCommand": "Create .claude/commands/fix-error.md",
+      "source": "custom",
+      "category": "debugging",
+      "keywords": ["error", "fix", "debug", "issue", "bug"],
+      "fileContent": "---\nname: fix-error\ndescription: Fix an error\nargument-hint: <error-message>\n---\n\nAnalyze this error: $ARGUMENTS\n\n1. Identify the root cause\n2. Search codebase for related code\n3. Propose a fix with explanation\n4. Verify the fix doesn't introduce new issues"
+    },
+    {
+      "id": "document-api",
+      "name": "/document-api",
+      "description": "Generate API documentation for endpoints",
+      "whenToUse": "When you need to document REST or GraphQL APIs",
+      "installCommand": "Create .claude/commands/document-api.md",
+      "source": "custom",
+      "category": "documentation",
+      "keywords": ["api", "document", "openapi", "swagger", "rest"],
+      "fileContent": "---\nname: document-api\ndescription: Generate API documentation\nargument-hint: <api-file-path>\n---\n\nAnalyze @$1 and generate documentation:\n1. OpenAPI/Swagger specification\n2. Endpoint descriptions\n3. Request/Response examples\n4. Error codes and handling"
+    }
+  ],
+  "settings": [
+    {
+      "id": "permissions-ask",
+      "name": "Ask Permissions",
+      "description": "Configure which tools require explicit permission before use",
+      "whenToUse": "When you want control over which operations Claude can perform automatically",
+      "installCommand": "Add to .claude/settings.json under 'permissions.ask'",
+      "source": "built-in",
+      "category": "security",
+      "keywords": ["permission", "ask", "confirm", "security"],
+      "configExample": {
+        "permissions": {
+          "ask": ["bash", "write", "edit"]
+        }
+      }
+    },
+    {
+      "id": "permissions-deny",
+      "name": "Deny Permissions",
+      "description": "Block access to sensitive files or directories",
+      "whenToUse": "When you have files that should never be modified by Claude",
+      "installCommand": "Add to .claude/settings.json under 'permissions.deny'",
+      "source": "built-in",
+      "category": "security",
+      "keywords": ["deny", "block", "sensitive", "protect", "security"],
+      "configExample": {
+        "permissions": {
+          "deny": [
+            "files matching .env",
+            "files matching **/*.key",
+            "files matching **/secrets/**"
+          ]
+        }
+      }
+    },
+    {
+      "id": "sandbox-filesystem",
+      "name": "Filesystem Sandbox",
+      "description": "Restrict file system access to specific directories",
+      "whenToUse": "When you want to limit Claude's file access for security",
+      "installCommand": "Add to .claude/settings.json under 'sandbox.filesystem'",
+      "source": "built-in",
+      "category": "security",
+      "keywords": ["sandbox", "filesystem", "restrict", "security"],
+      "configExample": {
+        "sandbox": {
+          "filesystem": {
+            "blocked": ["/etc", "/root", "/var"],
+            "allowed": ["/home/user/projects"]
+          }
+        }
+      }
+    },
+    {
+      "id": "model-default",
+      "name": "Default Model",
+      "description": "Set the default model for Claude Code sessions",
+      "whenToUse": "When you want to use a specific model by default",
+      "installCommand": "Add to .claude/settings.json under 'model'",
+      "source": "built-in",
+      "category": "configuration",
+      "keywords": ["model", "sonnet", "opus", "haiku"],
+      "configExample": {
+        "model": {
+          "default": "sonnet",
+          "fallback": "haiku"
+        }
+      }
+    }
+  ],
+  "claudemd": [
+    {
+      "id": "project-structure",
+      "name": "Project Structure Documentation",
+      "description": "Document your project's file structure and architecture",
+      "whenToUse": "At the start of any project to help Claude understand your codebase",
+      "installCommand": "Create CLAUDE.md in project root",
+      "source": "built-in",
+      "category": "documentation",
+      "keywords": ["project", "structure", "architecture", "documentation"],
+      "templateExample": "# Project Name\n\n## Overview\n[Project description]\n\n## Architecture\n[Key patterns and decisions]\n\n## Getting Started\n```bash\nnpm install\nnpm run dev\n```"
+    },
+    {
+      "id": "coding-conventions",
+      "name": "Coding Conventions",
+      "description": "Document your team's coding standards and conventions",
+      "whenToUse": "When you want Claude to follow specific coding styles",
+      "installCommand": "Add to CLAUDE.md in project root",
+      "source": "built-in",
+      "category": "standards",
+      "keywords": ["conventions", "style", "standards", "formatting"],
+      "templateExample": "## Code Style\n\n- Use TypeScript strict mode\n- Prefer functional components\n- Use named exports\n- Follow ESLint rules"
+    },
+    {
+      "id": "team-workflows",
+      "name": "Team Workflows",
+      "description": "Document team-specific workflows and processes",
+      "whenToUse": "When you have specific workflows Claude should follow",
+      "installCommand": "Add to CLAUDE.md in project root",
+      "source": "built-in",
+      "category": "workflow",
+      "keywords": ["workflow", "process", "team", "git"],
+      "templateExample": "## Development Workflow\n\n1. Create feature branch from main\n2. Write tests first (TDD)\n3. PR requires 2 approvals\n4. Squash merge to main"
+    }
+  ]
+}

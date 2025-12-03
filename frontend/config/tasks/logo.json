@@ -1,0 +1,164 @@
+{
+  "id": "logo",
+  "name": "Logo Creation",
+  "description": "Create a professional logo for your brand with AI-powered guidance and tools",
+  "tags": ["creative", "design", "branding"],
+  "estimatedTime": "2-4 hours",
+  "requiredTools": [
+    {
+      "type": "cli",
+      "name": "Claude Code Templates",
+      "description": "CLI tool for managing Claude Code agents and templates",
+      "installCommands": [
+        "npm install -g claude-code-templates"
+      ],
+      "docsUrl": "https://www.aitmpl.com/agents",
+      "checkCommand": "npx claude-code-templates@latest --version"
+    },
+    {
+      "type": "web",
+      "name": "AI Image Generator",
+      "description": "Choose one: Midjourney, DALL·E, Stable Diffusion, or Leonardo.ai",
+      "docsUrl": "https://www.midjourney.com"
+    },
+    {
+      "type": "web",
+      "name": "Design Tool (Optional)",
+      "description": "For refining and vectorizing: Figma, Canva, or Adobe Illustrator",
+      "docsUrl": "https://www.figma.com"
+    }
+  ],
+  "recommendedAgents": [
+    {
+      "source": "aitmpl",
+      "slug": "design-strategist",
+      "name": "Design Strategist",
+      "description": "Helps you think through design decisions and brand identity",
+      "recommendedUsage": "Use for initial brand strategy and design direction",
+      "docsUrl": "https://www.aitmpl.com/agents"
+    },
+    {
+      "source": "aitmpl",
+      "slug": "prompt-engineer",
+      "name": "Prompt Engineer",
+      "description": "Crafts optimized prompts for AI image generation",
+      "recommendedUsage": "Use to refine and optimize your logo generation prompts",
+      "docsUrl": "https://www.aitmpl.com/agents"
+    },
+    {
+      "source": "aitmpl",
+      "slug": "brand-consultant",
+      "name": "Brand Consultant",
+      "description": "Provides feedback on brand consistency and visual identity",
+      "recommendedUsage": "Use to evaluate logo options against your brand values",
+      "docsUrl": "https://www.aitmpl.com/agents"
+    }
+  ],
+  "questions": [
+    {
+      "id": "brandName",
+      "type": "text",
+      "label": "Brand/Company Name",
+      "placeholder": "Enter your brand or company name",
+      "required": true
+    },
+    {
+      "id": "industry",
+      "type": "text",
+      "label": "Industry/Category",
+      "placeholder": "e.g., Technology, Healthcare, Fashion, Real Estate",
+      "required": true
+    },
+    {
+      "id": "targetAudience",
+      "type": "textarea",
+      "label": "Target Audience",
+      "placeholder": "Describe your target audience (age, interests, demographics)",
+      "required": true
+    },
+    {
+      "id": "brandValues",
+      "type": "textarea",
+      "label": "Brand Values & Personality",
+      "placeholder": "What does your brand stand for? How should it feel? (e.g., innovative, trustworthy, playful, premium)",
+      "required": true
+    },
+    {
+      "id": "logoStyle",
+      "type": "select",
+      "label": "Preferred Logo Style",
+      "options": [
+        "Minimalist/Modern",
+        "Vintage/Classic",
+        "Playful/Fun",
+        "Bold/Strong",
+        "Elegant/Luxury",
+        "Tech/Futuristic",
+        "Hand-drawn/Organic",
+        "Abstract/Geometric"
+      ],
+      "required": true
+    },
+    {
+      "id": "colorPreferences",
+      "type": "textarea",
+      "label": "Color Preferences",
+      "placeholder": "List preferred colors, color combinations, or describe the mood (e.g., warm earth tones, vibrant blues and greens, monochrome)",
+      "required": false
+    },
+    {
+      "id": "logoType",
+      "type": "select",
+      "label": "Logo Type",
+      "options": [
+        "Wordmark (text-based)",
+        "Lettermark (initials)",
+        "Icon/Symbol only",
+        "Combination (icon + text)",
+        "Emblem (text inside icon)"
+      ],
+      "required": true
+    },
+    {
+      "id": "useCases",
+      "type": "multiselect",
+      "label": "Where will the logo be used?",
+      "options": [
+        "Website/Digital",
+        "Social Media",
+        "Business Cards",
+        "Signage",
+        "Product Packaging",
+        "Apparel",
+        "Mobile App Icon"
+      ],
+      "required": true
+    },
+    {
+      "id": "existingBranding",
+      "type": "textarea",
+      "label": "Existing Branding (if any)",
+      "placeholder": "Describe any existing brand guidelines, fonts, colors, or visual elements that should be considered",
+      "required": false
+    },
+    {
+      "id": "inspiration",
+      "type": "textarea",
+      "label": "Inspiration & References",
+      "placeholder": "Mention any logos, brands, or design styles you admire or want to avoid",
+      "required": false
+    },
+    {
+      "id": "constraints",
+      "type": "textarea",
+      "label": "Constraints or Special Requirements",
+      "placeholder": "Any technical constraints, cultural considerations, or must-have elements?",
+      "required": false
+    }
+  ],
+  "promptTemplates": {
+    "system": "You are an expert brand designer and logo creation consultant. Your role is to help users create professional logos by:\n1. Analyzing their brand requirements and target audience\n2. Providing a step-by-step plan for logo creation\n3. Generating optimized prompts for AI image generation tools\n4. Recommending design tools and best practices\n5. Suggesting relevant AITMPL/Claude agents to assist in the process\n\nBe specific, actionable, and creative. Consider technical aspects like scalability, versatility, and use cases.",
+    "planningPrompt": "Based on the following brand information, create a comprehensive logo creation plan:\n\n{userAnswers}\n\nProvide:\n1. A step-by-step plan (5-10 steps) for creating this logo\n2. 2-3 optimized AI image generation prompts that incorporate the brand requirements\n3. Specific recommendations for which AITMPL/Claude agents would be most helpful\n4. Design considerations and best practices for this specific use case\n5. Tips for iterating and refining the logo\n\nFormat your response clearly with numbered steps and distinct sections for prompts and recommendations."
+  }
+}
+
