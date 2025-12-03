@@ -57,7 +57,7 @@ export default function Header() {
               className="text-lg font-bold tracking-wide"
               style={{ color: colors.text.primary }}
             >
-              Mjölnir ⚡
+              Mjölnir
             </span>
             <span
               className="text-[10px] font-medium tracking-widest uppercase -mt-1"
