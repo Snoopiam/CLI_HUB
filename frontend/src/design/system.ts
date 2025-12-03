@@ -1,6 +1,6 @@
 /**
  * =============================================================================
- * DESIGN SYSTEM - MjolnirAI
+ * DESIGN SYSTEM - Mjölnir
  * =============================================================================
  *
  * A distinctive design language: Refined. Intelligent. Purposeful.

@@ -346,7 +346,7 @@ A: Yes! See the Developer section in `ONBOARDING_GUIDE.md`.
 **Cause:** Backend server isn't running or can't be reached.
 **Fix:** 
 1. Open PowerShell
-2. Navigate to `Labs/MjolnirAI/backend`
+2. Navigate to `Labs/Mjölnir/backend`
 3. Run `npm run dev`
 4. Refresh the browser
 
@@ -360,7 +360,7 @@ A: Yes! See the Developer section in `ONBOARDING_GUIDE.md`.
 ### Page is blank or shows errors
 **Cause:** Frontend build issue or missing dependencies.
 **Fix:**
-1. Navigate to `Labs/MjolnirAI/frontend`
+1. Navigate to `Labs/Mjölnir/frontend`
 2. Run `npm install`
 3. Run `npm run dev`
 4. Refresh the browser

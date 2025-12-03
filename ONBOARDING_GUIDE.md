@@ -431,7 +431,7 @@ Welcome, developer! This section explains how the system works and how to extend
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    MjolnirAI                             │
+│                    Mjölnir                             │
 ├─────────────────────────────────────────────────────────────┤
 │                                                              │
 │  ┌─────────────────────┐      ┌─────────────────────────┐  │
@@ -611,7 +611,7 @@ Create `frontend/config/tasks/brand-guidelines.json`:
 ```powershell
 # Stop the backend (Ctrl+C)
 # Start it again
-cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
+cd "C:\SnoopLabs\Labs\Mjölnir\backend"
 npm run dev
 ```
 

@@ -25,7 +25,7 @@ export default function Footer() {
               className="text-sm font-bold"
               style={{ color: colors.text.secondary }}
             >
-              MjolnirAI ⚡
+              Mjölnir ⚡
             </span>
             <span
               className="text-xs"

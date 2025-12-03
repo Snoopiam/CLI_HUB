@@ -1,5 +1,5 @@
 /**
- * Card - Unified card abstraction for MjolnirAI
+ * Card - Unified card abstraction for Mjölnir
  *
  * Provides consistent card styling across all pages with variant support:
  * - default: Standard dark card

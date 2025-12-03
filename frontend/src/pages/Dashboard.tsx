@@ -1,6 +1,6 @@
 /**
  * =============================================================================
- * DASHBOARD - MjolnirAI Home
+ * DASHBOARD - Mjölnir Home
  * =============================================================================
  *
  * A refined landing page that introduces the Claude Code optimization guide.
@@ -66,7 +66,7 @@ export default function Dashboard() {
   if (isLoading) {
     return (
       <PageLoader
-        title="Loading MjolnirAI ⚡"
+        title="Loading Mjölnir ⚡"
         subtitle="Preparing your feature discovery experience"
         backgroundVariant="hero"
       />
@@ -98,7 +98,7 @@ export default function Dashboard() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              MjolnirAI ⚡ Feature Discovery
+              Mjölnir ⚡ Feature Discovery
             </motion.p>
 
             {/* Main headline - animated gradient */}

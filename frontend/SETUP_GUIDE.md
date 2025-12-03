@@ -13,14 +13,14 @@ Welcome to your Personal AI Project Hub! This guide will walk you through settin
 ### Step 1: Install Frontend Dependencies
 
 ```powershell
-cd "C:\SnoopLabs\Labs\MjolnirAI\frontend"
+cd "C:\SnoopLabs\Labs\Mjölnir\frontend"
 npm install
 ```
 
 ### Step 2: Install Backend Dependencies
 
 ```powershell
-cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
+cd "C:\SnoopLabs\Labs\Mjölnir\backend"
 npm install
 ```
 
@@ -29,7 +29,7 @@ npm install
 Create a `.env` file in the backend directory:
 
 ```powershell
-cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
+cd "C:\SnoopLabs\Labs\Mjölnir\backend"
 Copy-Item .env.example .env
 ```
 
@@ -48,7 +48,7 @@ FRONTEND_URL=http://localhost:5174
 In a **new terminal**:
 
 ```powershell
-cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
+cd "C:\SnoopLabs\Labs\Mjölnir\backend"
 npm run dev
 ```
 
@@ -63,7 +63,7 @@ You should see:
 In **another terminal**:
 
 ```powershell
-cd "C:\SnoopLabs\Labs\MjolnirAI\frontend"
+cd "C:\SnoopLabs\Labs\Mjölnir\frontend"
 npm run dev
 ```
 
@@ -124,8 +124,8 @@ npx claude-code-templates@latest
 
 **Problem:** "Failed to load tasks" error  
 **Solution:** Make sure the config files exist:
-- `C:\SnoopLabs\Labs\MjolnirAI\frontend\config\projects.json`
-- `C:\SnoopLabs\Labs\MjolnirAI\frontend\config\tasks\logo.json`
+- `C:\SnoopLabs\Labs\Mjölnir\frontend\config\projects.json`
+- `C:\SnoopLabs\Labs\Mjölnir\frontend\config\tasks\logo.json`
 
 ## Adding New Workflows
 
@@ -143,7 +143,7 @@ Want to add more workflows beyond Logo Creation?
 ## Project Structure
 
 ```
-MjolnirAI/
+Mjölnir/
   frontend/
     config/
       projects.json           # Your SnoopLabs projects catalog

@@ -18,14 +18,14 @@ Visit **https://anthropic.com** → Sign up → Get API key
 ### 2. Install Frontend Dependencies
 
 ```powershell
-cd "C:\SnoopLabs\Labs\MjolnirAI\frontend"
+cd "C:\SnoopLabs\Labs\Mjölnir\frontend"
 npm install
 ```
 
 ### 3. Install Backend Dependencies
 
 ```powershell
-cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
+cd "C:\SnoopLabs\Labs\Mjölnir\backend"
 npm install
 ```
 
@@ -34,7 +34,7 @@ npm install
 Create `.env` in the backend folder:
 
 ```powershell
-cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
+cd "C:\SnoopLabs\Labs\Mjölnir\backend"
 "ANTHROPIC_API_KEY=your-key-here`nPORT=3001`nFRONTEND_URL=http://localhost:5174" | Out-File -FilePath .env -Encoding utf8
 ```
 
@@ -43,7 +43,7 @@ Replace `your-key-here` with your actual Claude API key.
 ### 5. Start the Backend (Terminal 1)
 
 ```powershell
-cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
+cd "C:\SnoopLabs\Labs\Mjölnir\backend"
 npm run dev
 ```
 
@@ -52,7 +52,7 @@ Wait for: `🚀 Server running on http://localhost:3001`
 ### 6. Start the Frontend (Terminal 2)
 
 ```powershell
-cd "C:\SnoopLabs\Labs\MjolnirAI\frontend"
+cd "C:\SnoopLabs\Labs\Mjölnir\frontend"
 npm run dev
 ```
 
@@ -94,8 +94,8 @@ npx claude-code-templates@latest
 
 ## Need Help?
 
-📖 **Detailed Setup**: Read `Labs/MjolnirAI/frontend/SETUP_GUIDE.md`  
-📊 **Full Documentation**: Read `Labs/MjolnirAI/PERSONAL_AI_HUB_COMPLETE.md`  
+📖 **Detailed Setup**: Read `Labs/Mjölnir/frontend/SETUP_GUIDE.md`  
+📊 **Full Documentation**: Read `Labs/Mjölnir/PERSONAL_AI_HUB_COMPLETE.md`  
 🐛 **Issues**: Check terminal logs in both windows
 
 ## What's Next?

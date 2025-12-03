@@ -3,7 +3,7 @@
  * ANALYZE PAGE - Main Claude Code Recommendation Flow
  * =============================================================================
  *
- * The core page of MjolnirAI. Clean, focused, purposeful.
+ * The core page of Mjölnir. Clean, focused, purposeful.
  * =============================================================================
  */
 
@@ -88,7 +88,7 @@ export default function AnalyzePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  MjolnirAI · Analysis
+                  Mjölnir · Analysis
                 </motion.p>
                 <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 gradient-text">
                   Analyze Your Task

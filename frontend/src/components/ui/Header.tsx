@@ -1,7 +1,7 @@
 /**
- * Header - MjolnirAI Navigation
+ * Header - Mjölnir Navigation
  *
- * A refined, distinctive header with the MjolnirAI brand identity.
+ * A refined, distinctive header with the Mjölnir brand identity.
  * Clean navigation with visual feedback.
  */
 
@@ -36,7 +36,7 @@ export default function Header() {
       />
 
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo - MjolnirAI */}
+        {/* Logo - Mjölnir */}
         <Link to="/" className="flex items-center gap-3 group">
           {/* Logo mark */}
           <motion.div
@@ -87,7 +87,7 @@ export default function Header() {
               className="text-lg font-bold tracking-wide"
               style={{ color: colors.text.primary }}
             >
-              MjolnirAI ⚡
+              Mjölnir ⚡
             </span>
             <span
               className="text-[10px] font-medium tracking-widest uppercase -mt-1"

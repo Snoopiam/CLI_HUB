@@ -10,28 +10,28 @@
 
 ### File Verification
 ✅ **Frontend Files:**
-- `Labs/MjolnirAI/frontend/package.json` ✓
-- `Labs/MjolnirAI/frontend/vite.config.ts` ✓ (Proxy configured to port 3001)
-- `Labs/MjolnirAI/frontend/src/App.tsx` ✓ (Routes configured)
-- `Labs/MjolnirAI/frontend/src/pages/Dashboard.tsx` ✓
-- `Labs/MjolnirAI/frontend/src/pages/LogoTask.tsx` ✓
-- `Labs/MjolnirAI/frontend/src/pages/AgentsPage.tsx` ✓
-- `Labs/MjolnirAI/frontend/src/components/*` ✓ (All 3 components)
-- `Labs/MjolnirAI/frontend/src/services/api.ts` ✓
-- `Labs/MjolnirAI/frontend/config/projects.json` ✓
-- `Labs/MjolnirAI/frontend/config/tasks/logo.json` ✓
+- `Labs/Mjölnir/frontend/package.json` ✓
+- `Labs/Mjölnir/frontend/vite.config.ts` ✓ (Proxy configured to port 3001)
+- `Labs/Mjölnir/frontend/src/App.tsx` ✓ (Routes configured)
+- `Labs/Mjölnir/frontend/src/pages/Dashboard.tsx` ✓
+- `Labs/Mjölnir/frontend/src/pages/LogoTask.tsx` ✓
+- `Labs/Mjölnir/frontend/src/pages/AgentsPage.tsx` ✓
+- `Labs/Mjölnir/frontend/src/components/*` ✓ (All 3 components)
+- `Labs/Mjölnir/frontend/src/services/api.ts` ✓
+- `Labs/Mjölnir/frontend/config/projects.json` ✓
+- `Labs/Mjölnir/frontend/config/tasks/logo.json` ✓
 
 ✅ **Backend Files:**
-- `Labs/MjolnirAI/backend/package.json` ✓
-- `Labs/MjolnirAI/backend/src/server.ts` ✓ (CORS configured)
-- `Labs/MjolnirAI/backend/src/routes/*` ✓ (All 3 routes)
-- `Labs/MjolnirAI/backend/src/services/*` ✓ (All 3 services)
+- `Labs/Mjölnir/backend/package.json` ✓
+- `Labs/Mjölnir/backend/src/server.ts` ✓ (CORS configured)
+- `Labs/Mjölnir/backend/src/routes/*` ✓ (All 3 routes)
+- `Labs/Mjölnir/backend/src/services/*` ✓ (All 3 services)
 
 ✅ **Documentation:**
-- `Labs/MjolnirAI/START_HERE.md` ✓
-- `Labs/MjolnirAI/frontend/SETUP_GUIDE.md` ✓
-- `Labs/MjolnirAI/PERSONAL_AI_HUB_COMPLETE.md` ✓
-- `Labs/MjolnirAI/backend/README.md` ✓
+- `Labs/Mjölnir/START_HERE.md` ✓
+- `Labs/Mjölnir/frontend/SETUP_GUIDE.md` ✓
+- `Labs/Mjölnir/PERSONAL_AI_HUB_COMPLETE.md` ✓
+- `Labs/Mjölnir/backend/README.md` ✓
 
 ## What Still Needs Testing (By You)
 
@@ -39,14 +39,14 @@
 
 **Frontend:**
 ```powershell
-cd "C:\SnoopLabs\Labs\MjolnirAI\frontend"
+cd "C:\SnoopLabs\Labs\Mjölnir\frontend"
 npm install
 ```
 Expected: No errors, all dependencies installed
 
 **Backend:**
 ```powershell
-cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
+cd "C:\SnoopLabs\Labs\Mjölnir\backend"
 npm install
 ```
 Expected: No errors, all dependencies installed
@@ -55,7 +55,7 @@ Expected: No errors, all dependencies installed
 
 **Create `.env` file:**
 ```powershell
-cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
+cd "C:\SnoopLabs\Labs\Mjölnir\backend"
 Copy-Item .env.example .env
 ```
 
@@ -70,7 +70,7 @@ FRONTEND_URL=http://localhost:5174
 
 **Start server:**
 ```powershell
-cd "C:\SnoopLabs\Labs\MjolnirAI\backend"
+cd "C:\SnoopLabs\Labs\Mjölnir\backend"
 npm run dev
 ```
 
@@ -88,7 +88,7 @@ npm run dev
 
 **Start dev server:**
 ```powershell
-cd "C:\SnoopLabs\Labs\MjolnirAI\frontend"
+cd "C:\SnoopLabs\Labs\Mjölnir\frontend"
 npm run dev
 ```
 
