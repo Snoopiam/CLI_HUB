@@ -57,10 +57,7 @@ export default function PageLoader({
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <h2
-              className="text-2xl font-bold mb-2"
-              style={{ color: colors.text.primary }}
-            >
+            <h2 className="text-2xl font-bold mb-2" style={{ color: colors.text.primary }}>
               {title}
             </h2>
             <p style={{ color: colors.text.tertiary }}>{subtitle}</p>
@@ -78,10 +75,7 @@ export default function PageLoader({
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              <p
-                className="text-sm truncate"
-                style={{ color: colors.text.secondary }}
-              >
+              <p className="text-sm truncate" style={{ color: colors.text.secondary }}>
                 "{previewText}"
               </p>
             </motion.div>
@@ -120,10 +114,7 @@ export function InlinePageLoader({
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        <h2
-          className="text-2xl font-bold mb-2"
-          style={{ color: colors.text.primary }}
-        >
+        <h2 className="text-2xl font-bold mb-2" style={{ color: colors.text.primary }}>
           {title}
         </h2>
         <p style={{ color: colors.text.tertiary }}>{subtitle}</p>
@@ -141,10 +132,7 @@ export function InlinePageLoader({
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          <p
-            className="text-sm truncate"
-            style={{ color: colors.text.secondary }}
-          >
+          <p className="text-sm truncate" style={{ color: colors.text.secondary }}>
             "{previewText}"
           </p>
         </motion.div>
@@ -152,4 +140,3 @@ export function InlinePageLoader({
     </motion.div>
   );
 }
-

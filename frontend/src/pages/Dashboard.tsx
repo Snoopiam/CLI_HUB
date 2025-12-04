@@ -90,19 +90,56 @@ export default function Dashboard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            {/* Eyebrow text */}
-            <motion.p
-              className="text-sm font-medium tracking-widest uppercase mb-6"
-              style={{ color: colors.accent.primary }}
+            {/* Section tag - Pill design */}
+            <motion.div
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
+              style={{
+                backgroundColor: `${colors.accent.primary}15`,
+                border: `1px solid ${colors.accent.primary}30`,
+              }}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              Mjölnir ⚡ Feature Discovery
-            </motion.p>
+              <span
+                className="text-xs font-semibold tracking-widest uppercase"
+                style={{ color: colors.accent.primary }}
+              >
+                Mjölnir · Feature Discovery
+              </span>
+            </motion.div>
+
+            {/* Lightning bolt separator - SVG for clean transparency */}
+            <motion.div
+              className="mx-auto mb-8 flex items-center justify-center"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3 }}
+            >
+              <svg
+                width="28"
+                height="40"
+                viewBox="0 0 28 40"
+                fill="none"
+                style={{
+                  filter: 'drop-shadow(0 0 10px rgba(56, 189, 248, 0.6))',
+                }}
+              >
+                <path
+                  d="M16 0L0 22h11L8 40l20-24H16L22 0H16z"
+                  fill="url(#bolt-gradient)"
+                />
+                <defs>
+                  <linearGradient id="bolt-gradient" x1="14" y1="0" x2="14" y2="40" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#67e8f9" />
+                    <stop offset="1" stopColor="#22d3ee" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </motion.div>
 
             {/* Main headline - animated gradient */}
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 gradient-text">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 gradient-text">
               What are you building?
             </h1>
 

@@ -1,418 +1,784 @@
-# 📖 Personal AI Project Hub - User Manual
+# Mjölnir AI - User Manual
 
-Welcome to the Personal AI Project Hub! This manual will guide you through using the application to create logos, discover AI agents, and leverage AI-powered workflows for your creative projects.
+> **Version:** 0.1.0
+> **Last Updated:** December 2025
 
 ---
 
 ## Table of Contents
 
-1. [What is the Personal AI Project Hub?](#what-is-the-personal-ai-project-hub)
+1. [Introduction](#introduction)
 2. [Getting Started](#getting-started)
-3. [The Dashboard](#the-dashboard)
-4. [Logo Creation Workflow](#logo-creation-workflow)
-5. [The Agents Page](#the-agents-page)
-6. [Understanding Your Generated Plan](#understanding-your-generated-plan)
-7. [Tips for Best Results](#tips-for-best-results)
-8. [Frequently Asked Questions](#frequently-asked-questions)
-9. [Troubleshooting](#troubleshooting)
+3. [Features Overview](#features-overview)
+4. [User Interface Guide](#user-interface-guide)
+5. [UI/UX Design System](#uiux-design-system)
+6. [Development Commands](#development-commands)
+7. [Troubleshooting](#troubleshooting)
 
 ---
 
-## What is the Personal AI Project Hub?
+## Introduction
 
-The Personal AI Project Hub is your **AI-powered creative assistant**. It helps you with creative tasks like designing logos by:
+**Mjölnir AI** is a feature discovery and optimization guide for Claude Code. It helps developers find the exact features, agents, and tools tailored for their specific tasks through an intelligent, task-based recommendation system.
 
-- **Guiding you through the process** step-by-step
-- **Recommending tools** you might need (with easy install commands)
-- **Asking smart questions** about your project
-- **Generating personalized plans** using Claude AI
-- **Creating ready-to-use prompts** for AI image generators like Midjourney or DALL·E
+### Core Philosophy
 
-Think of it as having a creative consultant who knows exactly what questions to ask and what tools to recommend!
+- **Task-First Approach**: Describe what you're building, get relevant recommendations
+- **Feature Discovery**: Explore six powerful Claude Code feature types
+- **Guided Workflows**: Step-by-step assistance for specific development tasks
 
 ---
 
 ## Getting Started
 
-### Before You Begin
+### Prerequisites
 
-Make sure the application is running:
-- **Frontend**: Should be accessible at `http://localhost:5174`
-- **Backend**: Should be running on `http://localhost:3001`
+- Node.js (v18 or higher recommended)
+- npm or yarn package manager
 
-If you see a blank page or errors, ask your developer to check the setup (see `START_HERE.md`).
+### Installation
 
-### Opening the App
+```bash
+# Navigate to the frontend directory
+cd frontend
 
-1. Open your web browser (Chrome, Edge, or Firefox recommended)
-2. Navigate to **http://localhost:5174**
-3. You should see the Dashboard with "My Project Hub" at the top
+# Install dependencies
+npm install
 
----
+# Start development server
+npm run dev
+```
 
-## The Dashboard
+The application will be available at `http://localhost:5173`
 
-The Dashboard is your home base. Here's what you'll find:
+### Production Build
 
-### Workflow Cards
-
-Each card represents a different creative workflow you can run:
-
-| Card | Description |
-|------|-------------|
-| **Logo Creation** | Create professional logos with AI guidance |
-| **Brand Guidelines** | (Coming Soon) Create brand style guides |
-| **Pitch Deck** | (Coming Soon) Generate presentation content |
-
-### Quick Stats Section
-
-At the bottom of the dashboard, you'll see three info cards:
-- **Get Started** - Reminds you to pick a workflow
-- **AI-Powered** - Explains the Claude AI integration
-- **Browse Agents** - Link to discover helpful AI agents
-
-### How to Use the Dashboard
-
-1. **Read the workflow descriptions** to find what you need
-2. **Click on a workflow card** (e.g., "Logo Creation") to start
-3. **Or click "Browse Agents"** to explore available AI assistants
+```bash
+npm run build
+npm run preview
+```
 
 ---
 
-## Logo Creation Workflow
+## Features Overview
 
-This is the main feature! Here's how to create a logo step-by-step.
+### Dashboard (Home)
 
-### Step 1: Review Required Tools
+The main landing page where you can:
+- Enter a task description to receive tailored feature recommendations
+- Browse Claude Code feature types at a glance
+- Access guided workflows
 
-When you open the Logo Creation page, you'll first see a **Required Tools** section.
+### Feature Types
 
-**What you'll see:**
-- A list of tools needed for logo creation
-- Each tool shows:
-  - **Name** (e.g., "Claude Code Templates")
-  - **Type** badge (CLI, Web, or App)
-  - **Description** of what it does
-  - **Install command** (if applicable) with a copy button
-  - **Documentation link** to learn more
+Mjölnir organizes Claude Code capabilities into six categories:
 
-**What to do:**
-1. **Review each tool** - You don't need ALL of them, but having them helps
-2. **Copy install commands** - Click the 📋 button to copy
-3. **Run in PowerShell** - Paste and run the command if you want to install
-4. **Click documentation links** - To learn more about each tool
+| Feature | Icon | Description |
+|---------|------|-------------|
+| **Agents** | ◆ | Specialized AI assistants for specific domains |
+| **Skills** | ✦ | Reusable workflows activated automatically |
+| **MCPs** | ◎ | External integrations and connections |
+| **Hooks** | ↻ | Lifecycle automation and triggers |
+| **Commands** | / | Quick actions via slash commands |
+| **CLAUDE.md** | # | Project context and conventions |
 
-**Do I need to install everything?**
-- **Claude Code Templates**: Recommended but optional
-- **AI Image Generator**: You need at least ONE (Midjourney, DALL·E, Leonardo, etc.)
-- **Design Tool**: Optional, for refining your logo later
+### Analyze Page
 
-### Step 2: Review Recommended Agents
-
-Below the tools, you'll see **Recommended Claude Agents**.
-
-These are AI assistants from the AITMPL ecosystem that can help with design tasks:
-- **Design Strategist** - Helps with design decisions
-- **Prompt Engineer** - Crafts better AI image prompts
-- **Brand Consultant** - Evaluates brand consistency
-
-**What to do:**
-- Read about each agent
-- Click "Learn more" links if interested
-- You can enable these agents later using the Claude Code Templates CLI
-
-### Step 3: Fill Out the Questionnaire
-
-This is the most important part! The questionnaire asks about your brand.
-
-**Questions you'll answer:**
-
-| Question | What to Enter | Example |
-|----------|---------------|---------|
-| **Brand/Company Name** | Your brand name | "SnoopLabs" |
-| **Industry/Category** | What field you're in | "Technology, AI Tools" |
-| **Target Audience** | Who your customers are | "Developers and tech enthusiasts aged 25-45" |
-| **Brand Values & Personality** | How your brand should feel | "Innovative, trustworthy, modern, approachable" |
-| **Preferred Logo Style** | Select from dropdown | "Minimalist/Modern" |
-| **Color Preferences** | Colors you like | "Deep purple, electric blue, clean white" |
-| **Logo Type** | Select from dropdown | "Combination (icon + text)" |
-| **Where will it be used?** | Check all that apply | Website, Social Media, Business Cards |
-| **Existing Branding** | Any current brand elements | "We use Inter font and purple accent colors" |
-| **Inspiration & References** | Logos you admire | "Love the simplicity of Apple, the playfulness of Slack" |
-| **Constraints** | Any special requirements | "Must work at small sizes for app icons" |
-
-**Tips for better results:**
-- **Be specific** - "Modern tech startup" is better than "technology"
-- **Describe emotions** - "Should feel trustworthy and innovative"
-- **Mention what to avoid** - "No clip art, no generic icons"
-- **Include context** - Why you need the logo, where it'll appear
-
-### Step 4: Generate Your Plan
-
-Once you've filled out the questionnaire:
-
-1. **Click "Generate Custom Plan"** at the bottom
-2. **Wait a few seconds** - The AI is creating your personalized plan
-3. **Scroll down** to see your results
-
-**What happens behind the scenes:**
-- Your answers are sent to the backend
-- Claude AI analyzes your brand requirements
-- A custom plan is generated just for you
-- The plan is displayed with actionable steps
-
-### Step 5: Use Your Generated Plan
-
-Your plan will include several sections:
-
-#### 📋 Step-by-Step Plan
-Numbered steps telling you exactly what to do:
-1. Research competitors and inspiration
-2. Sketch initial concepts
-3. Generate AI images
-4. Refine and iterate
-5. Finalize and export
-
-#### 🤖 Recommended Agents
-Specific AI agents that can help, with:
-- What each agent does
-- How to enable them
-
-#### ✨ AI Image Generation Prompts
-**This is the gold!** Ready-to-use prompts you can paste directly into:
-- Midjourney
-- DALL·E
-- Stable Diffusion
-- Leonardo.ai
-- Any other AI image generator
-
-**How to use the prompts:**
-1. Find a prompt you like
-2. Click the **"📋 Copy"** button
-3. Open your AI image generator
-4. Paste the prompt
-5. Generate images!
-
-#### 💡 Pro Tips
-Additional advice for better results.
+Enter any development task and receive:
+- Relevant feature recommendations
+- Suggested tools and agents
+- Related workflows
 
 ---
 
-## The Agents Page
+## User Interface Guide
 
-Access this by clicking "Browse Agents" on the dashboard or navigating to `/agents`.
+### Navigation
 
-### What You'll See
+- **Header**: Contains the Mjölnir AI logo and navigation links
+- **Main Input**: The central morphing input field for task entry
+- **Quick Start**: Pre-filled example tasks for rapid exploration
+- **Feature Grid**: Visual cards for each feature type
+- **Footer**: Additional links and information
 
-**CLI Status Banner:**
-- Shows if Claude Code Templates CLI is installed
-- If not installed, shows install commands with copy buttons
+### Interactive Elements
 
-**Category Filters:**
-- Click buttons to filter agents by category:
-  - Creative
-  - Design
-  - Business
-  - AI Tools
-  - etc.
-
-**Agent Cards:**
-Each card shows:
-- Agent name
-- Category badge
-- Description
-- Tags for easy identification
-
-### How to Use Agents
-
-1. **Browse by category** - Click filter buttons
-2. **Find relevant agents** - Read descriptions
-3. **Install the CLI** - If you haven't already
-4. **Enable agents** - Using the CLI commands shown
+- **Cards**: Hover to see tilt effects and accent highlights
+- **Buttons**: Lift on hover with smooth transitions
+- **Input Field**: Animated border glow on focus
+- **Background**: Subtle animated orbs for visual depth
 
 ---
 
-## Understanding Your Generated Plan
+## UI/UX Design System
 
-### Plan Quality Depends on Your Input
+This section documents the complete design language used in Mjölnir AI. Reference these values for consistent development and design work.
 
-The AI generates better plans when you provide:
-- ✅ Detailed brand descriptions
-- ✅ Specific color preferences
-- ✅ Clear target audience info
-- ✅ Examples of logos you like/dislike
+### Design Philosophy
 
-### Iterating on Your Plan
+> *Refined. Intelligent. Purposeful.*
 
-Not happy with the results? Try:
-1. **Go back to the questionnaire**
-2. **Add more detail** to your answers
-3. **Be more specific** about style preferences
-4. **Generate again** - Each generation is unique!
-
-### Using Multiple Prompts
-
-The AI typically generates 2-3 different prompts. Try them all!
-- Each prompt has a slightly different angle
-- Generate multiple images from each
-- Mix and match elements you like
+- Monochrome foundation with intentional warm accent
+- Motion that feels natural, not decorative
+- Interactions that reward attention
+- Typography that commands respect
 
 ---
 
-## Tips for Best Results
+### Color Palette
 
-### Before Starting
-- ✅ Have a clear idea of your brand identity
-- ✅ Gather examples of logos you like
-- ✅ Know where the logo will be used
-- ✅ Have an AI image generator account ready
+#### Background Colors
 
-### During the Questionnaire
-- ✅ Fill out ALL fields, even optional ones
-- ✅ Be specific rather than vague
-- ✅ Mention both what you want AND what you don't want
-- ✅ Include emotional descriptors ("should feel premium")
+| Name | Hex Code | RGB | Usage |
+|------|----------|-----|-------|
+| **Primary Background** | `#0A0A0A` | `rgb(10, 10, 10)` | Main page background (near black) |
+| **Secondary Background** | `#111111` | `rgb(17, 17, 17)` | Card backgrounds, elevated surfaces |
+| **Tertiary Background** | `#1A1A1A` | `rgb(26, 26, 26)` | Higher elevated surfaces |
+| **Hover Background** | `#222222` | `rgb(34, 34, 34)` | Interactive hover states |
 
-### After Generating
-- ✅ Read the entire plan before starting
-- ✅ Try all provided prompts
-- ✅ Generate multiple variations
-- ✅ Iterate and refine based on results
+#### Text Colors
 
-### Pro Tips
-- 💡 **Run the workflow multiple times** with slightly different answers
-- 💡 **Combine elements** from different generated images
-- 💡 **Use a design tool** (Figma, Canva) to refine AI-generated logos
-- 💡 **Test at different sizes** - logos should work big AND small
+| Name | Hex Code | RGB | Usage |
+|------|----------|-----|-------|
+| **Primary Text** | `#FAFAFA` | `rgb(250, 250, 250)` | Headlines, important content |
+| **Secondary Text** | `#A3A3A3` | `rgb(163, 163, 163)` | Body text, descriptions |
+| **Tertiary Text** | `#6B6B6B` | `rgb(107, 107, 107)` | Muted text, labels, hints |
+| **Inverse Text** | `#0A0A0A` | `rgb(10, 10, 10)` | Text on light backgrounds |
+
+#### Light Mode Text (for light card backgrounds)
+
+| Name | Hex Code | RGB | Usage |
+|------|----------|-----|-------|
+| **Light Primary** | `#0A0A0A` | `rgb(10, 10, 10)` | Dark text on light backgrounds |
+| **Light Secondary** | `#4A4A4A` | `rgb(74, 74, 74)` | Medium gray on light backgrounds |
+| **Light Tertiary** | `#6B6B6B` | `rgb(107, 107, 107)` | Light gray on light backgrounds |
+
+#### Border Colors
+
+| Name | Hex Code | RGB | Usage |
+|------|----------|-----|-------|
+| **Subtle Border** | `#1F1F1F` | `rgb(31, 31, 31)` | Barely visible separators |
+| **Default Border** | `#2A2A2A` | `rgb(42, 42, 42)` | Standard borders |
+| **Emphasis Border** | `#3A3A3A` | `rgb(58, 58, 58)` | Emphasized/highlighted borders |
+
+#### Accent Colors (Warm Gold/Bronze)
+
+| Name | Hex Code | RGBA | Usage |
+|------|----------|------|-------|
+| **Primary Accent** | `#D4A574` | `rgb(212, 165, 116)` | Main accent, CTAs, highlights |
+| **Secondary Accent** | `#B8956A` | `rgb(184, 149, 106)` | Darker variant for depth |
+| **Muted Accent** | - | `rgba(212, 165, 116, 0.1)` | Subtle background tints |
+| **Glow Accent** | - | `rgba(212, 165, 116, 0.2)` | Glow effects, emphasis |
+
+#### Semantic Colors
+
+| Name | Hex Code | RGB | Usage |
+|------|----------|-----|-------|
+| **Success** | `#4ADE80` | `rgb(74, 222, 128)` | Success states, confirmations |
+| **Warning** | `#FBBF24` | `rgb(251, 191, 36)` | Warning states, cautions |
+| **Error** | `#F87171` | `rgb(248, 113, 113)` | Error states, destructive actions |
+
+#### Category Card Background Colors
+
+| Category | RGBA Value | Usage |
+|----------|------------|-------|
+| **Agents** | `rgba(212, 165, 116, 0.08)` | Warm gold tint |
+| **Skills** | `rgba(200, 180, 160, 0.06)` | Neutral warm |
+| **MCPs** | `rgba(150, 180, 200, 0.07)` | Cool blue-gray |
+| **Hooks** | `rgba(200, 160, 180, 0.06)` | Mauve/purple |
+| **Commands** | `rgba(160, 200, 180, 0.06)` | Teal |
+| **CLAUDE.md** | `rgba(212, 165, 116, 0.08)` | Warm gold (like agents) |
+| **Settings** | `rgba(180, 180, 180, 0.06)` | Neutral gray |
+| **Development** | `rgba(180, 200, 160, 0.06)` | Soft yellow-green |
+| **Testing** | `rgba(160, 180, 200, 0.06)` | Cool blue |
+| **Debugging** | `rgba(200, 160, 160, 0.06)` | Warm red-gray |
+| **Documentation** | `rgba(180, 180, 200, 0.06)` | Cool purple |
 
 ---
 
-## Frequently Asked Questions
+### Typography
 
-### General Questions
+#### Font Family
 
-**Q: Do I need to pay for this?**
-A: The hub itself is free. You'll need:
-- A Claude API key (for plan generation) - has free tier
-- An AI image generator account (Midjourney, DALL·E, etc.) - varies by service
+```css
+font-family: "arboria", sans-serif;
+```
 
-**Q: Can I use this offline?**
-A: No, the hub requires an internet connection to call the Claude API.
+**Source:** Adobe Fonts (TypeKit)
+**Import:** `@import url("https://use.typekit.net/sxa0ixq.css");`
 
-**Q: Is my data saved?**
-A: Currently, your questionnaire answers and generated plans are NOT saved. Copy anything you want to keep!
+Arboria is used throughout the application for both sans-serif and monospace contexts, creating a unified, distinctive typographic identity.
 
-### Logo Creation Questions
+#### Font Size Scale
 
-**Q: Do I need to install all the recommended tools?**
-A: No! The tools are recommendations. At minimum, you need access to an AI image generator.
+| Token | Size (rem) | Size (px) | Usage |
+|-------|------------|-----------|-------|
+| `xs` | 0.75rem | 12px | Small labels, badges |
+| `sm` | 0.875rem | 14px | Secondary text, captions |
+| `base` | 1rem | 16px | Body text (default) |
+| `lg` | 1.125rem | 18px | Slightly emphasized text |
+| `xl` | 1.25rem | 20px | Subheadings |
+| `2xl` | 1.5rem | 24px | Section titles |
+| `3xl` | 2rem | 32px | Page section headers |
+| `4xl` | 2.5rem | 40px | Large headlines |
+| `5xl` | 3.5rem | 56px | Hero headlines |
 
-**Q: The prompts didn't work well in my image generator. What now?**
-A: Try:
-- Adjusting the prompt slightly
-- Using a different image generator
-- Re-running the workflow with more specific answers
+#### Font Weights
 
-**Q: Can I edit the generated prompts?**
-A: Absolutely! The prompts are starting points. Feel free to modify them.
+| Token | Value | Usage |
+|-------|-------|-------|
+| `normal` | 400 | Body text |
+| `medium` | 500 | Slightly emphasized |
+| `semibold` | 600 | Subheadings, labels |
+| `bold` | 700 | Headlines, CTAs |
 
-**Q: How do I make the logo a vector file?**
-A: AI generators create raster images. To vectorize:
-- Use Adobe Illustrator's Image Trace
-- Use Figma's auto-trace plugins
-- Use online tools like Vectorizer.ai
+#### Line Heights
 
-### Technical Questions
+| Token | Value | Usage |
+|-------|-------|-------|
+| `tight` | 1.1 | Headlines, large text |
+| `snug` | 1.25 | Compact layouts |
+| `normal` | 1.5 | Body text (default) |
+| `relaxed` | 1.75 | Comfortable reading |
 
-**Q: The page won't load. What's wrong?**
-A: Check that both servers are running:
-- Backend on port 3001
-- Frontend on port 5174
+#### Letter Spacing
 
-**Q: The plan generation failed. Why?**
-A: Common causes:
-- Invalid or missing API key in backend `.env`
-- Backend server not running
-- Network connectivity issues
+| Token | Value | Usage |
+|-------|-------|-------|
+| `tighter` | -0.05em | Display headlines |
+| `tight` | -0.025em | Large headings |
+| `normal` | 0em | Body text |
+| `wide` | 0.025em | Small caps, labels |
+| `wider` | 0.05em | Emphasis labels |
+| `widest` | 0.1em | All-caps headings |
 
-**Q: Can I add my own workflows?**
-A: Yes! See the Developer section in `ONBOARDING_GUIDE.md`.
+---
+
+### Spacing System
+
+Based on a 4px base unit:
+
+| Token | Size (rem) | Size (px) |
+|-------|------------|-----------|
+| `px` | 1px | 1px |
+| `0` | 0 | 0px |
+| `1` | 0.25rem | 4px |
+| `2` | 0.5rem | 8px |
+| `3` | 0.75rem | 12px |
+| `4` | 1rem | 16px |
+| `5` | 1.25rem | 20px |
+| `6` | 1.5rem | 24px |
+| `8` | 2rem | 32px |
+| `10` | 2.5rem | 40px |
+| `12` | 3rem | 48px |
+| `16` | 4rem | 64px |
+| `20` | 5rem | 80px |
+| `24` | 6rem | 96px |
+
+#### Common Spacing Patterns
+
+| Element | Spacing | Tailwind Class |
+|---------|---------|----------------|
+| Card Padding | 24px / 20px | `p-6` / `p-5` |
+| Section Margins | 32-48px | `mb-8` to `mb-12` |
+| Element Gaps | 12-24px | `gap-3` to `gap-6` |
+| Pill Badges | 16px × 8px | `px-4 py-2` |
+| Input Padding | 20px | `p-5` |
+
+---
+
+### Border Radius
+
+| Token | Size (rem) | Size (px) | Usage |
+|-------|------------|-----------|-------|
+| `none` | 0 | 0px | Sharp corners |
+| `sm` | 0.25rem | 4px | Small elements |
+| `md` | 0.5rem | 8px | Default buttons |
+| `lg` | 0.75rem | 12px | Cards, inputs |
+| `xl` | 1rem | 16px | Buttons, pills |
+| `2xl` | 1.5rem | 24px | Large cards, modals |
+| `full` | 9999px | - | Circles, pills |
+
+#### Common Radius Usage
+
+| Element | Radius | Tailwind Class |
+|---------|--------|----------------|
+| Buttons & Pills | 16px | `rounded-xl` |
+| Cards | 24px | `rounded-2xl` |
+| Inputs | 24px | `rounded-2xl` |
+| Small Badges | 4-12px | `rounded` to `rounded-lg` |
+| Avatar/Orbs | Circular | `rounded-full` |
+
+---
+
+### Shadows & Effects
+
+#### Box Shadows
+
+| Token | CSS Value | Usage |
+|-------|-----------|-------|
+| `none` | `none` | Flat elements |
+| `sm` | `0 1px 2px rgba(0, 0, 0, 0.3)` | Subtle elevation |
+| `md` | `0 4px 6px rgba(0, 0, 0, 0.3)` | Default cards |
+| `lg` | `0 10px 15px rgba(0, 0, 0, 0.4)` | Elevated elements |
+| `xl` | `0 20px 25px rgba(0, 0, 0, 0.4)` | Modals, dropdowns |
+| `glow` | `0 0 20px rgba(212, 165, 116, 0.15)` | Accent glow |
+| `glowStrong` | `0 0 40px rgba(212, 165, 116, 0.25)` | Emphasized glow |
+
+#### Hover Lift Effect
+
+```css
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+```
+
+#### Glassmorphism
+
+```css
+.glass-card {
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+```
+
+#### Backdrop Blur
+
+| Usage | Value |
+|-------|-------|
+| Header | `blur(20px)` |
+| Input containers | `blur(20px)` |
+| Overlays | `blur(20px)` |
+
+---
+
+### Gradients
+
+#### Animated Gradient Text
+
+```css
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    #FAFAFA 0%,
+    #D4A574 25%,
+    #FAFAFA 50%,
+    #B8956A 75%,
+    #FAFAFA 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 8s ease infinite;
+}
+```
+
+#### Border Gradient
+
+```css
+background: linear-gradient(
+  135deg,
+  rgba(212, 165, 116, 0.3) 0%,
+  transparent 30%,
+  transparent 70%,
+  rgba(184, 149, 106, 0.2) 100%
+);
+```
+
+#### Shimmer Effect
+
+```css
+background: linear-gradient(
+  90deg,
+  transparent 0%,
+  rgba(212, 165, 116, 0.1) 50%,
+  transparent 100%
+);
+```
+
+#### Section Divider Glow
+
+```css
+background: linear-gradient(
+  90deg,
+  transparent,
+  rgba(212, 165, 116, 0.3),
+  transparent
+);
+```
+
+#### Background Orb Gradients
+
+| Orb | Gradient |
+|-----|----------|
+| Primary | `radial-gradient(circle, #D4A57415, transparent 70%)` |
+| Secondary | `radial-gradient(circle, #B8956A12, transparent 70%)` |
+| Accent | `radial-gradient(circle, #D4A57420, transparent 70%)` |
+
+---
+
+### Animation & Motion
+
+#### Duration Tokens
+
+| Token | Duration | Usage |
+|-------|----------|-------|
+| `instant` | 0.1s | Micro-interactions |
+| `fast` | 0.2s | Quick feedback |
+| `normal` | 0.3s | Standard transitions (default) |
+| `slow` | 0.5s | Emphasized motion |
+| `slower` | 0.8s | Complex animations |
+
+#### Easing Curves (Cubic Bezier)
+
+| Token | Value | CSS | Usage |
+|-------|-------|-----|-------|
+| `default` | `[0.4, 0, 0.2, 1]` | `cubic-bezier(0.4, 0, 0.2, 1)` | Standard ease |
+| `out` | `[0, 0, 0.2, 1]` | `cubic-bezier(0, 0, 0.2, 1)` | Deceleration |
+| `in` | `[0.4, 0, 1, 1]` | `cubic-bezier(0.4, 0, 1, 1)` | Acceleration |
+| `bounce` | `[0.34, 1.56, 0.64, 1]` | `cubic-bezier(0.34, 1.56, 0.64, 1)` | Playful emphasis |
+| `elastic` | `[0.68, -0.55, 0.265, 1.55]` | `cubic-bezier(0.68, -0.55, 0.265, 1.55)` | Springy motion |
+
+#### Spring Animations (Framer Motion)
+
+```javascript
+// Default spring
+{ type: 'spring', stiffness: 400, damping: 30 }
+
+// Bouncy spring
+{ type: 'spring', stiffness: 300, damping: 20 }
+```
+
+#### Keyframe Animations
+
+| Animation | Duration | Description |
+|-----------|----------|-------------|
+| `gradient-shift` | 8s | Animated gradient text - shifts background position |
+| `shimmer` | 3s | Shimmer sweep effect - slides left to right |
+| `glow-pulse` | 3s | Pulsing glow shadow - 0 0 20px to 0 0 40px |
+| `floating` | 20-35s | Background orb movement |
+| `dot-bounce` | 0.8s | Loading dot animation |
+
+#### Keyframe Definitions
+
+```css
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 200% center; }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(212, 165, 116, 0.1); }
+  50% { box-shadow: 0 0 40px rgba(212, 165, 116, 0.2); }
+}
+```
+
+---
+
+### Z-Index Scale
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `behind` | -1 | Behind main content |
+| `base` | 0 | Default layer |
+| `raised` | 10 | Slightly elevated |
+| `dropdown` | 100 | Dropdown menus |
+| `sticky` | 200 | Sticky headers |
+| `overlay` | 300 | Background overlays |
+| `modal` | 400 | Modal dialogs |
+| `popover` | 500 | Popovers |
+| `toast` | 600 | Toast notifications |
+| `tooltip` | 700 | Highest priority tooltips |
+
+---
+
+### Responsive Breakpoints
+
+| Token | Width | Usage |
+|-------|-------|-------|
+| `sm` | 640px | Small screens (mobile landscape) |
+| `md` | 768px | Tablets |
+| `lg` | 1024px | Desktops |
+| `xl` | 1280px | Large desktops |
+| `2xl` | 1536px | Extra large screens |
+
+---
+
+### Scrollbar Styling
+
+```css
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3A3A3A;
+}
+```
+
+---
+
+### Selection Styling
+
+```css
+::selection {
+  background-color: rgba(212, 165, 116, 0.3);
+  color: #FAFAFA;
+}
+```
+
+---
+
+### Focus States
+
+```css
+:focus-visible {
+  outline: 2px solid #D4A574;
+  outline-offset: 2px;
+}
+```
+
+---
+
+### Component Styling Rules
+
+#### Cards
+
+| Property | Default Variant | Accent Variant |
+|----------|-----------------|----------------|
+| Background | `rgba(17, 17, 17, 0.7)` | Same with gradient border |
+| Border | `1px solid #2A2A2A` | Gradient border with glow |
+| Hover Border | `#D4A574` | Enhanced glow |
+| Hover Transform | `translateY(-4px)` | Same |
+| Tilt | Optional 3D perspective | Same |
+
+#### Buttons
+
+```css
+/* Standard Button */
+padding: 0.5rem 1rem; /* px-4 py-2 */
+border-radius: 1rem; /* rounded-xl */
+
+/* Hover */
+transform: translateY(-1px);
+
+/* Active */
+transform: scale(0.98);
+
+/* Hover Shadow */
+box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+```
+
+#### Input Fields (MorphInput)
+
+| State | Property | Value |
+|-------|----------|-------|
+| Default | Background | `#111111` |
+| Default | Border Radius | `rounded-2xl` (24px) |
+| Focus | Border | Animated gradient |
+| Focus | Glow | `radial-gradient(ellipse at center, #D4A574 15%, transparent 70%)` |
+| Valid Button | Background | `#D4A574` |
+| Invalid Button | Background | `#222222` |
+
+#### Badges/Tags
+
+```css
+/* Standard Badge */
+padding: 0.25rem 0.625rem; /* px-2.5 py-1 */
+border-radius: 0.5rem; /* rounded-lg */
+font-size: 0.75rem; /* text-xs */
+
+/* Icon Badge (CardIcon) */
+width: 2.5rem; /* w-10 */
+height: 2.5rem; /* h-10 */
+border-radius: 0.75rem; /* rounded-xl */
+
+/* Group Hover Effect */
+transform: scale(1.1) rotate(5deg);
+```
+
+#### Section Pills
+
+```css
+padding: 0.5rem 1rem; /* px-4 py-2 */
+border-radius: 9999px; /* rounded-full */
+background: rgba(212, 165, 116, 0.15);
+border: 1px solid rgba(212, 165, 116, 0.3);
+```
+
+---
+
+### CSS Custom Properties
+
+```css
+:root {
+  /* Typography */
+  font-family: "arboria", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Color scheme */
+  color-scheme: dark;
+  color: #FAFAFA;
+  background-color: #0A0A0A;
+
+  /* Font rendering */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Custom properties */
+  --accent-primary: #D4A574;
+  --accent-secondary: #B8956A;
+  --font-sans: "arboria", sans-serif;
+  --font-mono: "arboria", sans-serif;
+}
+```
+
+---
+
+### Utility Classes
+
+| Class | Description |
+|-------|-------------|
+| `.gradient-text` | Animated gradient text effect |
+| `.shimmer` | Shimmer animation overlay |
+| `.glow-pulse` | Pulsing glow box-shadow |
+| `.border-gradient` | Animated gradient border |
+| `.glass-card` | Glassmorphism effect |
+| `.hover-lift` | Transform lift on hover |
+| `.line-clamp-2` | 2-line text truncation |
+| `.line-clamp-3` | 3-line text truncation |
+
+---
+
+### Layout Patterns
+
+#### Page Structure
+
+| Element | CSS |
+|---------|-----|
+| Header | Fixed, `h-16` (64px), `z-50` |
+| Main Content | `pt-32 pb-16 px-6` |
+| Hero Section | `pt-32 pb-24 px-6` |
+| Footer | `py-12 px-6` |
+| Min Height | `min-h-screen` |
+
+#### Container Widths
+
+| Container | Max Width | Tailwind Class |
+|-----------|-----------|----------------|
+| Main Container | ~64rem | `max-w-5xl` |
+| Card Container | ~56rem | `max-w-4xl` |
+| Input Container | ~42rem | `max-w-2xl` |
+
+---
+
+## Development Commands
+
+```bash
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Run linting
+npm run lint
+```
 
 ---
 
 ## Troubleshooting
 
-### "Failed to load tasks"
-**Cause:** Backend server isn't running or can't be reached.
-**Fix:** 
-1. Open PowerShell
-2. Navigate to `Labs/Mjölnir/backend`
-3. Run `npm run dev`
-4. Refresh the browser
+### Common Issues
 
-### "Failed to generate plan"
-**Cause:** API key issue or Claude API error.
-**Fix:**
-1. Check `backend/.env` has a valid `ANTHROPIC_API_KEY`
-2. Make sure your API key has credits/quota
-3. Check the backend terminal for error messages
+**Font not loading:**
+- Ensure internet connection for Adobe Fonts (TypeKit)
+- Check that the import URL is accessible: `https://use.typekit.net/sxa0ixq.css`
 
-### Page is blank or shows errors
-**Cause:** Frontend build issue or missing dependencies.
-**Fix:**
-1. Navigate to `Labs/Mjölnir/frontend`
-2. Run `npm install`
-3. Run `npm run dev`
-4. Refresh the browser
+**Animations not smooth:**
+- Enable hardware acceleration in browser
+- Check for `prefers-reduced-motion` media query respect
 
-### Copy button doesn't work
-**Cause:** Browser clipboard permissions.
-**Fix:**
-1. Allow clipboard access when prompted
-2. Or manually select and copy the text
+**Colors appear different:**
+- Ensure color scheme is set to dark
+- Check monitor color profile settings
+- Verify browser is rendering with correct color space
 
-### Slow plan generation
-**Cause:** Normal - Claude AI takes a few seconds to respond.
-**Note:** Generation typically takes 3-10 seconds depending on:
-- Your internet connection
-- Claude API load
-- Complexity of your answers
+**Glassmorphism not working:**
+- Check browser support for `backdrop-filter`
+- Ensure `-webkit-backdrop-filter` fallback is present
 
 ---
 
-## Getting Help
+## File Structure
 
-If you're stuck:
-
-1. **Check this manual** - Most answers are here
-2. **Read the FAQ** - Common questions answered
-3. **Check TESTING_CHECKLIST.md** - For technical issues
-4. **Ask your developer** - For setup problems
+```
+frontend/
+├── src/
+│   ├── components/
+│   │   └── ui/           # Reusable UI components
+│   │       ├── AnimatedBackground.tsx
+│   │       ├── Card.tsx
+│   │       ├── Footer.tsx
+│   │       ├── Header.tsx
+│   │       ├── MorphInput.tsx
+│   │       └── PageLoader.tsx
+│   ├── design/
+│   │   └── system.ts     # Design system tokens
+│   ├── pages/
+│   │   ├── Dashboard.tsx
+│   │   ├── AnalyzePage.tsx
+│   │   ├── AgentsPage.tsx
+│   │   └── LogoTask.tsx
+│   ├── services/         # API services
+│   ├── types/            # TypeScript types
+│   ├── App.tsx           # Main app component
+│   ├── index.css         # Global styles
+│   └── main.tsx          # Entry point
+├── public/               # Static assets
+├── package.json
+└── tailwind.config.js
+```
 
 ---
 
-## Quick Reference Card
+## Credits
 
-### Keyboard Shortcuts
-- None currently - all interactions are click-based
-
-### Key URLs
-- **Dashboard:** http://localhost:5174
-- **Logo Creation:** http://localhost:5174/tasks/logo
-- **Agents:** http://localhost:5174/agents
-
-### Key Actions
-| Want to... | Do this... |
-|------------|------------|
-| Create a logo | Dashboard → Click "Logo Creation" |
-| Copy a command | Click the 📋 button |
-| Generate a plan | Fill questionnaire → Click "Generate Custom Plan" |
-| Browse agents | Dashboard → Click "Browse Agents" |
-| Go back | Click "← Back to Dashboard" |
+- **Design System:** Mjölnir Design Language
+- **Typography:** Arboria by Adobe Fonts
+- **Animation:** Framer Motion
+- **Styling:** Tailwind CSS
+- **Framework:** React 18 + TypeScript + Vite
 
 ---
 
-**Happy creating!** 🎨
-
-If you create something amazing, we'd love to hear about it!
-
+*Mjölnir - Refined. Intelligent. Purposeful.*

@@ -8,6 +8,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { colors } from '../../design/system';
+import Tilt from './Tilt';
 
 const navItems = [
   { path: '/', label: 'Home', icon: '◇' },
@@ -38,14 +39,14 @@ export default function Header() {
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo - Mjölnir */}
         <Link to="/" className="flex items-center gap-3 group">
-          {/* Logo mark - Mjölnir hammer with glow on hover */}
-          <motion.div
+          {/* Logo mark - Mjölnir hammer with tilt effect */}
+          <Tilt
+            rotationFactor={15}
+            springOptions={{ stiffness: 300, damping: 20 }}
             className="relative w-10 h-10 flex items-center justify-center"
-            whileHover={{ scale: 1.08, rotate: 5 }}
-            whileTap={{ scale: 0.95 }}
           >
             {/* Glow effect on hover */}
-            <motion.div
+            <div
               className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               style={{
                 background: `radial-gradient(circle, rgba(56, 189, 248, 0.4) 0%, transparent 70%)`,
@@ -57,7 +58,7 @@ export default function Header() {
               alt="Mjölnir"
               className="w-10 h-10 object-contain relative z-10"
             />
-          </motion.div>
+          </Tilt>
 
           {/* Logo text - vertically centered with icon */}
           <div className="hidden sm:flex flex-col justify-center">
@@ -115,28 +116,28 @@ export default function Header() {
         </nav>
 
         {/* CTA / External link */}
-        <motion.a
-          href="https://github.com/Snoopiam"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium"
-          style={{
-            backgroundColor: colors.bg.secondary,
-            color: colors.text.secondary,
-            border: `1px solid ${colors.border.default}`,
-          }}
-          whileHover={{
-            borderColor: colors.accent.primary,
-            color: colors.text.primary,
-            y: -1,
-          }}
-          whileTap={{ scale: 0.98 }}
+        <Tilt
+          rotationFactor={12}
+          springOptions={{ stiffness: 300, damping: 20 }}
+          className="hidden md:block"
         >
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-          </svg>
-          <span>SnoopLabs</span>
-        </motion.a>
+          <a
+            href="https://github.com/Snoopiam"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-colors duration-200 hover:border-sky-400 hover:text-white"
+            style={{
+              backgroundColor: colors.bg.secondary,
+              color: colors.text.secondary,
+              border: `1px solid ${colors.border.default}`,
+            }}
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+            </svg>
+            <span>SnoopLABS</span>
+          </a>
+        </Tilt>
       </div>
     </header>
   );

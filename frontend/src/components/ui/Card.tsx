@@ -135,16 +135,18 @@ const CardContent = forwardRef<HTMLDivElement, CardContentProps>(
         className={`relative p-6 rounded-2xl overflow-hidden ${
           variant === 'accent' ? 'border-gradient' : ''
         } ${interactive ? 'cursor-pointer group' : ''} ${className}`}
-        style={{
-          backgroundColor: getBackgroundColor(),
-          border: getBorderStyle(),
-          transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
-          // Expose text colors as CSS custom properties for children
-          '--card-text-primary': textColors.primary,
-          '--card-text-secondary': textColors.secondary,
-          '--card-text-tertiary': textColors.tertiary,
-          ...style,
-        } as React.CSSProperties}
+        style={
+          {
+            backgroundColor: getBackgroundColor(),
+            border: getBorderStyle(),
+            transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
+            // Expose text colors as CSS custom properties for children
+            '--card-text-primary': textColors.primary,
+            '--card-text-secondary': textColors.secondary,
+            '--card-text-tertiary': textColors.tertiary,
+            ...style,
+          } as React.CSSProperties
+        }
         onMouseEnter={(e) => {
           setIsHovered(true);
           if (interactive && variant !== 'accent') {
@@ -319,4 +321,3 @@ export function CardBadge({
     </span>
   );
 }
-

@@ -72,30 +72,32 @@ export default function FeatureCard({
   };
 
   // Determine text colors based on variant
-  const textColors = variant === 'light'
-    ? {
-        primary: colors.text.light.primary,
-        secondary: colors.text.light.secondary,
-        tertiary: colors.text.light.tertiary,
-      }
-    : {
-        primary: colors.text.primary,
-        secondary: colors.text.secondary,
-        tertiary: colors.text.tertiary,
-      };
+  const textColors =
+    variant === 'light'
+      ? {
+          primary: colors.text.light.primary,
+          secondary: colors.text.light.secondary,
+          tertiary: colors.text.light.tertiary,
+        }
+      : {
+          primary: colors.text.primary,
+          secondary: colors.text.secondary,
+          tertiary: colors.text.tertiary,
+        };
 
   // Background colors for internal elements based on variant
-  const bgColors = variant === 'light'
-    ? {
-        badge: 'rgba(0, 0, 0, 0.06)',
-        code: 'rgba(0, 0, 0, 0.04)',
-        codeBorder: 'rgba(0, 0, 0, 0.1)',
-      }
-    : {
-        badge: colors.bg.tertiary,
-        code: colors.bg.primary,
-        codeBorder: colors.border.subtle,
-      };
+  const bgColors =
+    variant === 'light'
+      ? {
+          badge: 'rgba(0, 0, 0, 0.06)',
+          code: 'rgba(0, 0, 0, 0.04)',
+          codeBorder: 'rgba(0, 0, 0, 0.1)',
+        }
+      : {
+          badge: colors.bg.tertiary,
+          code: colors.bg.primary,
+          codeBorder: colors.border.subtle,
+        };
 
   return (
     <motion.div
@@ -120,13 +122,7 @@ export default function FeatureCard({
         />
       )}
 
-      <Card
-        variant={variant}
-        tilt
-        interactive
-        onClick={handleCopy}
-        className="p-5 rounded-xl"
-      >
+      <Card variant={variant} tilt interactive onClick={handleCopy} className="p-5 rounded-xl">
         {/* Header */}
         <div className="flex items-start justify-between gap-4 mb-3">
           <div className="flex items-center gap-3">
@@ -166,10 +162,7 @@ export default function FeatureCard({
         </div>
 
         {/* Description */}
-        <p
-          className="text-sm leading-relaxed mb-4"
-          style={{ color: textColors.secondary }}
-        >
+        <p className="text-sm leading-relaxed mb-4" style={{ color: textColors.secondary }}>
           {description}
         </p>
 
@@ -249,9 +242,10 @@ export default function FeatureCard({
         <motion.div
           className="absolute inset-0 pointer-events-none rounded-xl"
           style={{
-            background: variant === 'light'
-              ? `linear-gradient(135deg, transparent 60%, rgba(212, 165, 116, 0.1))`
-              : `linear-gradient(135deg, transparent 60%, ${colors.accent.muted})`,
+            background:
+              variant === 'light'
+                ? `linear-gradient(135deg, transparent 60%, rgba(212, 165, 116, 0.1))`
+                : `linear-gradient(135deg, transparent 60%, ${colors.accent.muted})`,
           }}
           animate={{ opacity: isHovered ? 1 : 0 }}
           transition={{ duration: 0.3 }}
